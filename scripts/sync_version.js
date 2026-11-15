@@ -41,7 +41,6 @@ const STATIC_TAG_ASSETS = [
   'js/atlas_boot.js',
   'js/map_data.js',
   'js/lore_core.js',
-  'js/atlas_track.js',
   ...SYNC_CONTROLLER_SCRIPTS,
 ];
 
