@@ -1,0 +1,77 @@
+# 每次推送 main 时，把 sitemap 里的所有 URL 推给 IndexNow（Bing / Yandex 等）
+#
+# 为什么需要：ESA 构建成功 ≠ 搜索引擎知道页面更新了。IndexNow 是主动通知，
+# 让 Bing 优先重抓，比等爬虫自然巡回快得多。
+#
+# 注意：这里用 Python 标准库发请求，避免引入 npm 依赖（本站无构建、无 node_modules）。
+name: IndexNow
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  notify:
+    name: Submit sitemap URLs to IndexNow
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Wait for ESA rebuild to go live
+        run: |
+          # ESA 构建约需 40-60 秒；key 文件必须已可访问，否则 Bing 会返回 403
+          for i in $(seq 1 20); do
+            code=$(curl -s -o /dev/null -w '%{http_code}' https://map.xhja.cn/ || true)
+            if [ "$code" = "200" ]; then echo "site is up ($code)"; break; fi
+            echo "attempt $i: $code, waiting..."; sleep 10
+          done
+
+      - name: Submit URLs
+        run: |
+          python3 - <<'PY'
+          import json, re, sys, time, urllib.request
+
+          HOST = 'map.xhja.cn'
+          sm = urllib.request.urlopen(f'https://{HOST}/sitemap.xml', timeout=30).read().decode()
+          urls = [u.replace('&amp;', '&').strip()
+                  for u in re.findall(r'<loc>([^<]+)</loc>', sm)
+                  if u.startswith(f'https://{HOST}/')]
+          print(f'sitemap URLs: {len(urls)}')
+          if not urls:
+              sys.exit('no URLs found')
+
+          # 从仓库里找 key 文件（32 位 hex 的 .txt）
+          import glob, os
+          keys = [os.path.basename(p) for p in glob.glob('*.txt')
+                  if re.fullmatch(r'[0-9a-f]{32}\.txt', os.path.basename(p))]
+          if not keys:
+              sys.exit('IndexNow key file missing (run scripts/indexnow-key.js)')
+          key = keys[0][:-4]
+          key_location = f'https://{HOST}/{keys[0]}'
+          print('key:', key, '| keyLocation:', key_location)
+
+          payload = json.dumps({'host': HOST, 'key': key,
+                                'keyLocation': key_location,
+                                'urlList': urls}).encode()
+          ok = 0
+          for ep in ('https://api.indexnow.org/indexnow',
+                     f'https://www.bing.com/indexnow'):
+              for attempt in range(3):
+                  try:
+                      req = urllib.request.Request(
+                          ep, data=payload, method='POST',
+                          headers={'Content-Type': 'application/json; charset=utf-8'})
+                      with urllib.request.urlopen(req, timeout=30) as r:
+                          print(f'{ep} -> {r.status}')
+                          if r.status in (200, 202):
+                              ok += 1
+                          break
+                  except Exception as e:
+                      print(f'{ep} attempt {attempt+1} failed: {e}')
+                      time.sleep(5)
+          print(f'Accepted by {ok} endpoint(s)')
+          if ok == 0:
+              sys.exit('all IndexNow endpoints rejected the submission')
+          PY

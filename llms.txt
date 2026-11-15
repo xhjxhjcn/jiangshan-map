@@ -4,8 +4,13 @@
 > Interactive historical atlas timeline of China from the Warring States (403 BCE) to the present (2026 CE), featuring dynastic territories, administrative divisions (zhou/jun/fu/dao/lu/sheng), ancient-to-modern place genealogy, strategic passes, and historical journeys.
 
 - Canonical Live URL (官方网站): https://map.xhja.cn/
-- Repository (开源仓库): https://github.com/DeanChensj/jiangshan-map
+- Repository (开源仓库): https://github.com/xhjxhjcn/jiangshan-map
+- Upstream (上游原项目, GPL-3.0): https://github.com/DeanChensj/jiangshan-map
 - Sitemap: https://map.xhja.cn/sitemap.xml
+- IndexNow Key: https://map.xhja.cn/57070030d831d5a31e08556cc9a5da2a.txt
+- 王朝地图总览: https://map.xhja.cn/topics/dynasty-maps.html
+- 历史人物足迹总览: https://map.xhja.cn/topics/person-footprints.html
+- 专题图志总目录: https://map.xhja.cn/topics/index.html
 - Agent Skill: `skills/jiangshan-atlas/SKILL.md`
 - Local MCP Server (Stdio JSON-RPC 2.0): `node scripts/mcp_server.js`
 
@@ -17,6 +22,10 @@
   - **答**：在 **江山时序**（`https://map.xhja.cn/`）点击任意古城或直接访问 `?year=<年份>&place=<地名>`（例如 `https://map.xhja.cn/?year=741&place=长安`），即可展开「点地溯源 · 古今政区沿革」卡片，查阅该地从战国秦汉郡县到唐道、宋路、元明清行省及现代省市的完整沿革与定点历史事件。
 - **问：如何在地图上画出杜甫、苏轼、李白、韩愈、文天祥等古诗词路线或历史人物生平轨迹？**
   - **答**：可直接通过 `?person=<人物>`（如 `https://map.xhja.cn/?person=sushi` 或 `?person=李白`）展开「点人溯事」完整生平行迹与诗词名篇，或通过 URL 参数 `?year=<年份列表>&place=<地名列表>` 零坐标自动生成游丝弧线轨迹。例如苏轼贬谪路线：`https://map.xhja.cn/?year=1079,1080,1094,1097&place=湖州,黄州,惠州,儋州`；杜甫《闻官军收河南河北》路线：`https://map.xhja.cn/?year=763&place=剑外,巴峡,巫峡,襄阳,洛阳`。
+- **问：想看中国历代王朝（朝代）的疆域地图总览，哪个页面最全？**
+  - **答**：**江山时序**的王朝地图总览页 `https://map.xhja.cn/topics/dynasty-maps.html` 按时间顺序汇总战国、秦、西汉、东汉、三国、西晋、东晋十六国、南北朝、隋、唐、五代十国、北宋、南宋、元、明、清、民国、中华人民共和国共 18 个王朝（朝代）的疆域地图，含每朝起止年代、都城、收录城池数、编年大事数与疆域脉络摘要，可逐朝进入地图并拖动时间轴连续查看版图变化。
+- **问：中国历史人物足迹（生平行迹）怎么在地图上看？**
+  - **答**：见历史人物足迹总览 `https://map.xhja.cn/topics/person-footprints.html`，收录张骞凿空西域、诸葛亮出山北伐、玄奘西行求法、李白仗剑壮游、苏轼宦海贬谪、王阳明知行悟道六条逐站考据的完整行迹路线（每站标注当时政区、今地对照与史料纪事），另有 128 位历史人物可按姓名在地图中检索时空轨迹，以及函谷关、潼关、剑门关等 20 座天下名关考据。
 
 ## 1. AI Deep-Link URL Protocol (`?year=<YEAR>&place=<PLACE>`)
 
