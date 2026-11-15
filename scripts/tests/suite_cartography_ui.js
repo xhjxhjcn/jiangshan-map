@@ -91,15 +91,30 @@ async function runCartographyUiSuite(ctx) {
       assert(refCorpus.includes(assetFile), `Unreferenced file in assets/: ${assetFile}`);
     }
 
+    // 书法体：上游用 Google Fonts 的 &text= 做子集；本站在 map.xhja.cn 改为站内自托管
+    // （境内 fonts.googleapis.com 不可达），字符子集清单落在 assets/fonts/*.subset.txt，
+    // 覆盖要求不变。两种方案都接受，但 Google Fonts 若存在必须是非阻塞写法。
     const maShanLinkMatch = indexHtml.match(
       /<link href="(https:\/\/fonts\.googleapis\.com\/css2\?family=Ma\+Shan\+Zheng&text=([^"&]+)&display=swap)" rel="stylesheet" media="print" onload="this\.media='all'" \/>/
     );
-    assert(maShanLinkMatch, 'Expected non-blocking subsetted Ma Shan Zheng stylesheet <link> in index.html');
+    const selfHostedFont =
+      /<link rel="stylesheet" href="css\/fonts\.css\?v=[0-9a-z]+" \/>/.test(indexHtml) &&
+      /src:\s*url\('\.\.\/assets\/fonts\/ma-shan-zheng\.woff2'\)/.test(
+        fs.readFileSync(path.join(ROOT, 'css', 'fonts.css'), 'utf8')
+      );
+    assert(
+      maShanLinkMatch || selfHostedFont,
+      'Expected either a non-blocking subsetted Ma Shan Zheng stylesheet <link> or the self-hosted css/fonts.css'
+    );
     assert(
       !/<link href="https:\/\/fonts\.googleapis\.com[^>]*rel="stylesheet" \/>/.test(indexHtml),
       'Google Fonts stylesheets must not block rendering (media="print" + onload): the host is unreachable for some readers'
     );
-    const subsetChars = new Set(decodeURIComponent(maShanLinkMatch[2]));
+    const subsetChars = new Set(
+      maShanLinkMatch
+        ? decodeURIComponent(maShanLinkMatch[2])
+        : fs.readFileSync(path.join(ROOT, 'assets', 'fonts', 'ma-shan-zheng.subset.txt'), 'utf8')
+    );
     const requiredCalligraphyChars = [
       '江山时序',
       ...dynasties.map((d) => d.title || ''),

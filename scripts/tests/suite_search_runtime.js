@@ -420,7 +420,13 @@ async function runSearchRuntimeSuite(ctx) {
           ctrl.activePolity = null;
 
           const indexHtml = require('fs').readFileSync(path.join(ROOT, 'index.html'), 'utf8');
-          assert(/data-cf-beacon='[^']*"spa":\s*false/.test(indexHtml), 'Cloudflare beacon must keep "spa": false, or every URL state write is counted as a pageview');
+          // 本站在 map.xhja.cn 移除了 Cloudflare Web Analytics（境内不可达，且属上游统计），
+          // 因此这里只约束「若存在则必须保留 spa:false」，不存在也算合规。
+          const hasCfBeacon = /data-cf-beacon=/.test(indexHtml);
+          assert(
+            !hasCfBeacon || /data-cf-beacon='[^']*"spa":\s*false/.test(indexHtml),
+            'Cloudflare beacon must keep "spa": false, or every URL state write is counted as a pageview'
+          );
 
           Object.assign(ctrl, { activePerson: { profiles: [{ key: 'libai' }, { key: 'dufu' }] }, activePersonEventIdx: 3 });
           ctrl._writeUrlState();
@@ -2902,10 +2908,14 @@ async function runSearchRuntimeSuite(ctx) {
     // controller in the real load order: the deferred script executes first, then app.js's
     // window listener (registered earlier, while parsing) creates the controller.
     const trackSrc = fs.readFileSync(path.join(JS_DIR, 'atlas_track.js'), 'utf8');
-    assert(
-      /<script defer src="js\/atlas_track\.js\?v=/.test(indexHtml),
-      'atlas_track.js must load with defer so it stays out of the first-paint budget'
-    );
+    // 本站在 map.xhja.cn 不加载 atlas_track.js（它只对 deanchen.me 生效，属上游统计），
+    // 所以「必须出现 defer 标签」改为「若出现则必须 defer」，脚本本身仍全量自测。
+    if (/js\/atlas_track\.js\?v=/.test(indexHtml)) {
+      assert(
+        /<script defer src="js\/atlas_track\.js\?v=/.test(indexHtml),
+        'atlas_track.js must load with defer so it stays out of the first-paint budget'
+      );
+    }
 
     const bootTracker = ({ hostname = 'deanchen.me', search = '', doNotTrack = null } = {}) => {
       const listeners = { window: {}, document: {} };
