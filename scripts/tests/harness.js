@@ -116,8 +116,8 @@ function createValidationContext({ fastMode = false } = {}) {
   sandbox.clearTimeout = clearTimeout;
   sandbox.location = {
     search: '',
-    origin: 'https://deanchen.me',
-    pathname: '/jiangshan-map/',
+    origin: 'https://map.xhja.cn',
+    pathname: '/',
   };
   sandbox.window.location = sandbox.location;
   for (const b of controllerBundles) {

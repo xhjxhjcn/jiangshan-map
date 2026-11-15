@@ -17,7 +17,7 @@ import urllib.request
 import zlib
 
 PUBLIC_BASE_URL = os.environ.get(
-    "JIANGSHAN_PUBLIC_URL", "https://deanchen.me/jiangshan-map/"
+    "JIANGSHAN_PUBLIC_URL", "https://map.xhja.cn/"
 )
 PNG_SIGNATURE = b"\x89PNG\r\n\x1a\n"
 MIN_VALID_PNG_BYTES = 65_536
@@ -284,7 +284,7 @@ const sandbox = {
   document: { addEventListener: () => {}, getElementById: () => null, querySelectorAll: () => [] },
   localStorage: { getItem: () => null, setItem: () => {} },
   history: { replaceState: () => {} },
-  location: { origin: "https://deanchen.me", pathname: "/jiangshan-map/", search: "" },
+  location: { origin: "https://map.xhja.cn", pathname: "/", search: "" },
   navigator: { language: process.env.JS_LANG === "en" ? "en-US" : "zh-CN" },
   performance: { now: () => 0 },
   requestAnimationFrame: () => {},
