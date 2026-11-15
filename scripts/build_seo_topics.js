@@ -20,7 +20,7 @@ const { CONTROLLER_SCRIPTS } = require('./sync_version');
 const ROOT = path.resolve(__dirname, '..');
 const JS_DIR = path.join(ROOT, 'js');
 const TOPICS_DIR = path.join(ROOT, 'topics');
-const BASE_URL = 'https://deanchen.me/jiangshan-map';
+const BASE_URL = 'https://map.xhja.cn';
 const LASTMOD = '2026-10-21';
 
 function escHtml(str) {

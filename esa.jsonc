@@ -1,0 +1,13 @@
+// 阿里云 ESA「函数和 Pages」项目配置 —— map.xhja.cn
+//
+// 纯静态站：产物就是仓库根目录，没有构建步骤，也没有边缘函数入口。
+// 这份配置的优先级高于控制台里填的构建命令（参考同账号下的 box.xhja.cn）。
+{
+  "name": "map-xhja-cn",
+  "installCommand": "",
+  "buildCommand": "",
+  "assets": {
+    "directory": "./",
+    "notFoundStrategy": "404Page"
+  }
+}

@@ -6,7 +6,7 @@
 
 **一幅可以拖动时间、点城读史、追随古人足迹的中国历史交互舆图（公元前 403 年三家分晋 — 今）**
 
-[**立即在线把玩 → https://deanchen.me/jiangshan-map/**](https://deanchen.me/jiangshan-map/)
+[**立即在线把玩 → https://map.xhja.cn/**](https://map.xhja.cn/)
 
 *作者自述：[从历史课本里的插图，到 GitHub 1k star：「江山时序」背后的故事](https://deanchen.me/history/atlas/2026/10/25/jiangshan-map-story.html)*
 
@@ -21,7 +21,7 @@
 </p>
 
 <p align="center">
-  <a href="https://deanchen.me/jiangshan-map/">
+  <a href="https://map.xhja.cn/">
     <img src="assets/hero_demo_zh.webp" alt="江山时序 15 秒实机演示：秦扫六合、两千年疆域流转、长安十八朝沿革与苏东坡贬谪行迹" width="100%" />
   </a>
 </p>
@@ -49,7 +49,7 @@
 - **时间轴可缩放**：向内拖动时间轴两端的手柄可放大某一段历史（如秦、三国、五代这类短朝代），双击时间轴恢复全览。
 - **语音讲解**：打开播放按钮旁的讲解开关，时间轴自动播放时会用浏览器内置语音朗读纪年、年号与当年大事，人物行迹的自动巡礼同样适用（需要浏览器支持语音合成）。
 
-> [点击直达：大明永乐十三年（1415 年）· 两京十三布政使司与「应天府」府境探查 →](https://deanchen.me/jiangshan-map/?year=1415&zoom=1.75&center=115.8,33.2&hover=%E5%BA%94%E5%A4%A9%E5%BA%9C)
+> [点击直达：大明永乐十三年（1415 年）· 两京十三布政使司与「应天府」府境探查 →](https://map.xhja.cn/?year=1415&zoom=1.75&center=115.8,33.2&hover=%E5%BA%94%E5%A4%A9%E5%BA%9C)
 
 ![明永乐十三年（1415 年）· 应天府政区悬停预览](assets/preview_1415_ming_yingtian.webp)
 
@@ -62,7 +62,7 @@
 - **看这里发生过什么大事**：每个朝代行下方直接内嵌当年发生在此地的**定点地标大事**（如咸阳的「商鞅变法」「秦王扫六合」、樊城的「关羽水淹七军」、长安的「玄武门之变」、临安的「风波亭岳飞蒙难」）。点一下右上角的 **「史事纪要」** 胶囊，还能一键筛出有大事发生的朝代；点击任意一条事件，时间轴和地图版图立即穿越回那一年！
 - **探访天下名关与诗词名胜**：地图以专属汉阙城楼图标标出函谷关、潼关、剑门关、雁门关、玉门关、阳关、山海关等**天下雄关**（附山脉水系扼守形势详解），并收录赤壁、垓下、五丈原、兰亭、岳阳楼、滕王阁、蓝关、楼兰、蒲昌海（罗布泊）、热海（伊塞克湖）等**诗词名胜与古战场**，支持直接检索落针。
 
-> [点击直达：盛唐开元二十九年（741 年）· 点开长安看千年风云 →](https://deanchen.me/jiangshan-map/?year=741&place=长安)
+> [点击直达：盛唐开元二十九年（741 年）· 点开长安看千年风云 →](https://map.xhja.cn/?year=741&place=长安)
 
 ![盛唐 741 年 · 长安点地溯源与史事纪要](assets/preview_741_tang_trace.webp)
 
@@ -83,7 +83,7 @@
 
 每切换上一处 / 下一处史事（点击面板里的「上一站 / 下一站」或底部的 **`‹ / ›`**、键盘方向键，或按空格键自动演进），**底下的历史年份、在位君主与年号、王朝版图都会跟着古人的脚步同步流转**，单段朱砂飞白弧线精准高亮当前行程，并附有《史记》《出师表》《传习录》或唐宋千古名篇原句。
 
-> [点击直达：展阅苏东坡宦海贬谪生平与行迹（1037 — 1101 年）→](https://deanchen.me/jiangshan-map/?person=sushi)
+> [点击直达：展阅苏东坡宦海贬谪生平与行迹（1037 — 1101 年）→](https://map.xhja.cn/?person=sushi)
 
 ![点人溯事 · 苏轼生平与宦海行迹](assets/preview_journey_sushi.webp)
 
@@ -95,7 +95,7 @@
 - **当朝掌故线索 + 舆图盲猜扎针**：地图隐去所有城池标注，十道题按梯度递进，题目形如「请在舆图上标定【西汉】时期的『武威』」，并附上**当朝掌故与史事线索**（不剧透现代城市名），凭你的山河水系直觉在舆图上落针预览、点击图钉旁的 **「`确认 ↵`」** 揭晓同心圆环距离得分！
 - 十道题答完，系统会根据总分授予你 **「太史令 · 舆图大家」「职方郎中」「州郡从事」** 等传统官阶封号。
 
-> [点击直达：西汉武帝元狩二年（前 121 年）· 开启「舆图寻址」挑战模式 →](https://deanchen.me/jiangshan-map/?year=-121&quiz=locate)
+> [点击直达：西汉武帝元狩二年（前 121 年）· 开启「舆图寻址」挑战模式 →](https://map.xhja.cn/?year=-121&quiz=locate)
 
 ![西汉前 121 年 · 舆图寻址挑战模式预览](assets/preview_quiz_challenge.webp)
 
@@ -117,14 +117,14 @@
 ### 一键直达链接（适合分享给朋友）
 
 你可以直接在网址后面加上参数，把某个特定的历史瞬间分享给朋友：
-- **看某一年或重大疆域变迁**：[`?year=-403`](https://deanchen.me/jiangshan-map/?year=-403)（《资治通鉴》开篇 · 三家分晋） / [`?year=-121`](https://deanchen.me/jiangshan-map/?year=-121)（西汉霍去病开河西） / [`?year=648`](https://deanchen.me/jiangshan-map/?year=648)（唐置安西四镇与王玄策破中天竺） / [`?year=1288`](https://deanchen.me/jiangshan-map/?year=1288)（元改宣政院直辖西藏） / [`?year=1881`](https://deanchen.me/jiangshan-map/?year=1881)（曾纪泽签约收复伊犁） / [`?year=1945`](https://deanchen.me/jiangshan-map/?year=1945)（抗战胜利台湾光复 · “秋海棠”重光）
-- **看某场大战**：[`?year=-260&place=长平`](https://deanchen.me/jiangshan-map/?year=-260&place=长平)（长平之战） / [`?year=208&place=赤壁`](https://deanchen.me/jiangshan-map/?year=208&place=赤壁)（赤壁之战） / [`?year=383&place=淝水`](https://deanchen.me/jiangshan-map/?year=383&place=淝水)（东晋前秦 · 淝水之战）
-- **查某座古城或名胜的千年故事**：[`?year=741&place=长安`](https://deanchen.me/jiangshan-map/?year=741&place=长安)（长安/西安） / [`?year=1415&place=应天府`](https://deanchen.me/jiangshan-map/?year=1415&place=应天府)（建康/应天/南京） / [`?year=819&place=蓝关`](https://deanchen.me/jiangshan-map/?year=819&place=蓝关)（韩愈「雪拥蓝关马不前」）
-- **画一条自定义诗词/行军路线**：[`?year=763&place=剑外,巴峡,巫峡,襄阳,洛阳`](https://deanchen.me/jiangshan-map/?year=763&place=剑外,巴峡,巫峡,襄阳,洛阳)（杜甫《闻官军收河南河北》同年归乡路） / [`?year=1079,1080,1094,1097&place=湖州,黄州,惠州,儋州`](https://deanchen.me/jiangshan-map/?year=1079,1080,1094,1097&place=湖州,黄州,惠州,儋州)（苏轼「黄州惠州儋州」跨年贬谪路）
-- **展阅历史人物生平与行迹**：[`?person=qinshihuang`](https://deanchen.me/jiangshan-map/?person=qinshihuang)（秦始皇） / [`?person=zhangqian`](https://deanchen.me/jiangshan-map/?person=zhangqian)（张骞凿空西域） / [`?person=zhugeliang`](https://deanchen.me/jiangshan-map/?person=zhugeliang)（诸葛亮出山北伐） / [`?person=xuanzang`](https://deanchen.me/jiangshan-map/?person=xuanzang)（玄奘西行求法） / [`?person=libai`](https://deanchen.me/jiangshan-map/?person=libai)（李白仗剑壮游） / [`?person=sushi`](https://deanchen.me/jiangshan-map/?person=sushi)（苏轼宦海贬谪） / [`?person=wangyangming`](https://deanchen.me/jiangshan-map/?person=wangyangming)（王阳明心学立功）
-- **多人同看与历史事件**：[`?person=libai,dufu`](https://deanchen.me/jiangshan-map/?person=libai,dufu)（李白与杜甫） / [`?person=caocao,liubei,sunquan`](https://deanchen.me/jiangshan-map/?person=caocao,liubei,sunquan)（曹操、刘备、孙权） / [`?event=qintongyi`](https://deanchen.me/jiangshan-map/?event=qintongyi)（秦灭六国） / [`?event=chuhan`](https://deanchen.me/jiangshan-map/?event=chuhan)（楚汉之争） / [`?event=anshi`](https://deanchen.me/jiangshan-map/?event=anshi)（安史之乱） / [`?event=jingkang`](https://deanchen.me/jiangshan-map/?event=jingkang)（靖康之变）
-- **直接开一局挑战**：[`?year=-121&quiz=locate`](https://deanchen.me/jiangshan-map/?year=-121&quiz=locate)（舆图寻址挑战）
-- **切换繁简与英文界面**：[`?lang=zh-tw`](https://deanchen.me/jiangshan-map/?lang=zh-tw)（繁体中文） / [`?lang=en`](https://deanchen.me/jiangshan-map/?lang=en)（英文版）
+- **看某一年或重大疆域变迁**：[`?year=-403`](https://map.xhja.cn/?year=-403)（《资治通鉴》开篇 · 三家分晋） / [`?year=-121`](https://map.xhja.cn/?year=-121)（西汉霍去病开河西） / [`?year=648`](https://map.xhja.cn/?year=648)（唐置安西四镇与王玄策破中天竺） / [`?year=1288`](https://map.xhja.cn/?year=1288)（元改宣政院直辖西藏） / [`?year=1881`](https://map.xhja.cn/?year=1881)（曾纪泽签约收复伊犁） / [`?year=1945`](https://map.xhja.cn/?year=1945)（抗战胜利台湾光复 · “秋海棠”重光）
+- **看某场大战**：[`?year=-260&place=长平`](https://map.xhja.cn/?year=-260&place=长平)（长平之战） / [`?year=208&place=赤壁`](https://map.xhja.cn/?year=208&place=赤壁)（赤壁之战） / [`?year=383&place=淝水`](https://map.xhja.cn/?year=383&place=淝水)（东晋前秦 · 淝水之战）
+- **查某座古城或名胜的千年故事**：[`?year=741&place=长安`](https://map.xhja.cn/?year=741&place=长安)（长安/西安） / [`?year=1415&place=应天府`](https://map.xhja.cn/?year=1415&place=应天府)（建康/应天/南京） / [`?year=819&place=蓝关`](https://map.xhja.cn/?year=819&place=蓝关)（韩愈「雪拥蓝关马不前」）
+- **画一条自定义诗词/行军路线**：[`?year=763&place=剑外,巴峡,巫峡,襄阳,洛阳`](https://map.xhja.cn/?year=763&place=剑外,巴峡,巫峡,襄阳,洛阳)（杜甫《闻官军收河南河北》同年归乡路） / [`?year=1079,1080,1094,1097&place=湖州,黄州,惠州,儋州`](https://map.xhja.cn/?year=1079,1080,1094,1097&place=湖州,黄州,惠州,儋州)（苏轼「黄州惠州儋州」跨年贬谪路）
+- **展阅历史人物生平与行迹**：[`?person=qinshihuang`](https://map.xhja.cn/?person=qinshihuang)（秦始皇） / [`?person=zhangqian`](https://map.xhja.cn/?person=zhangqian)（张骞凿空西域） / [`?person=zhugeliang`](https://map.xhja.cn/?person=zhugeliang)（诸葛亮出山北伐） / [`?person=xuanzang`](https://map.xhja.cn/?person=xuanzang)（玄奘西行求法） / [`?person=libai`](https://map.xhja.cn/?person=libai)（李白仗剑壮游） / [`?person=sushi`](https://map.xhja.cn/?person=sushi)（苏轼宦海贬谪） / [`?person=wangyangming`](https://map.xhja.cn/?person=wangyangming)（王阳明心学立功）
+- **多人同看与历史事件**：[`?person=libai,dufu`](https://map.xhja.cn/?person=libai,dufu)（李白与杜甫） / [`?person=caocao,liubei,sunquan`](https://map.xhja.cn/?person=caocao,liubei,sunquan)（曹操、刘备、孙权） / [`?event=qintongyi`](https://map.xhja.cn/?event=qintongyi)（秦灭六国） / [`?event=chuhan`](https://map.xhja.cn/?event=chuhan)（楚汉之争） / [`?event=anshi`](https://map.xhja.cn/?event=anshi)（安史之乱） / [`?event=jingkang`](https://map.xhja.cn/?event=jingkang)（靖康之变）
+- **直接开一局挑战**：[`?year=-121&quiz=locate`](https://map.xhja.cn/?year=-121&quiz=locate)（舆图寻址挑战）
+- **切换繁简与英文界面**：[`?lang=zh-tw`](https://map.xhja.cn/?lang=zh-tw)（繁体中文） / [`?lang=en`](https://map.xhja.cn/?lang=en)（英文版）
 
 ### 嵌入到你的网页
 
@@ -136,7 +136,7 @@
 
 ```html
 <iframe
-  src="https://deanchen.me/jiangshan-map/?embed=1&year=1104&trace=101.778,36.617&from=1072&to=1126"
+  src="https://map.xhja.cn/?embed=1&year=1104&trace=101.778,36.617&from=1072&to=1126"
   width="100%" height="480" loading="lazy" style="border:0"
   title="江山时序 · 公元1104年 北宋"></iframe>
 ```
@@ -185,9 +185,9 @@
 
 | 模式 | URL 格式示例 | 自动渲染效果 |
 | :--- | :--- | :--- |
-| **单点寻址 (0D)** | [`?year=819&place=蓝关`](https://deanchen.me/jiangshan-map/?year=819&place=蓝关)<br>*(韩愈「雪拥蓝关马不前」)* | 自动跳转至唐宪宗元和十四年（819 年），精准落针秦岭蓝田关，展开两千四百年政区沿革卡片 |
-| **同年多站路线 (1D)** | [`?year=763&place=剑外,巴峡,巫峡,襄阳,洛阳`](https://deanchen.me/jiangshan-map/?year=763&place=剑外,巴峡,巫峡,襄阳,洛阳)<br>*(杜甫「即从巴峡穿巫峡，便下襄阳向洛阳」)* | 自动在 763 年唐代版图上绘制 `1` → `5` 朱砂弧线轨迹并自适应缩放视野，点击任意站点即可查看历代沿革 |
-| **跨年多站路线 (4D)** | [`?year=1079,1080,1094,1097&place=湖州,黄州,惠州,儋州`](https://deanchen.me/jiangshan-map/?year=1079,1080,1094,1097&place=湖州,黄州,惠州,儋州)<br>*(苏轼「问汝平生功业，黄州惠州儋州」)* | `year[i]` 与 `place[i]` 一一对应，地图路标自动标注 **`湖州 (1079)` → `黄州 (1080)` → `惠州 (1094)` → `儋州 (1097)`**，点击任意站点即可同步切换至该年份版图 |
+| **单点寻址 (0D)** | [`?year=819&place=蓝关`](https://map.xhja.cn/?year=819&place=蓝关)<br>*(韩愈「雪拥蓝关马不前」)* | 自动跳转至唐宪宗元和十四年（819 年），精准落针秦岭蓝田关，展开两千四百年政区沿革卡片 |
+| **同年多站路线 (1D)** | [`?year=763&place=剑外,巴峡,巫峡,襄阳,洛阳`](https://map.xhja.cn/?year=763&place=剑外,巴峡,巫峡,襄阳,洛阳)<br>*(杜甫「即从巴峡穿巫峡，便下襄阳向洛阳」)* | 自动在 763 年唐代版图上绘制 `1` → `5` 朱砂弧线轨迹并自适应缩放视野，点击任意站点即可查看历代沿革 |
+| **跨年多站路线 (4D)** | [`?year=1079,1080,1094,1097&place=湖州,黄州,惠州,儋州`](https://map.xhja.cn/?year=1079,1080,1094,1097&place=湖州,黄州,惠州,儋州)<br>*(苏轼「问汝平生功业，黄州惠州儋州」)* | `year[i]` 与 `place[i]` 一一对应，地图路标自动标注 **`湖州 (1079)` → `黄州 (1080)` → `惠州 (1094)` → `儋州 (1097)`**，点击任意站点即可同步切换至该年份版图 |
 
 ### 2. CLI 一键出图（供 Agent 工具调用）
 

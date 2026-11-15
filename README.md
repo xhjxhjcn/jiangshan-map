@@ -6,7 +6,7 @@
 
 **An Interactive Historical Atlas of China from the Warring States (403 BCE) to the Present — Scrub Through Time, Trace Ancient Cities, and Walk in the Footsteps of History**
 
-[**Play Live Demo (English UI) → https://deanchen.me/jiangshan-map/?lang=en**](https://deanchen.me/jiangshan-map/?lang=en)
+[**Play Live Demo (English UI) → https://map.xhja.cn/?lang=en**](https://map.xhja.cn/?lang=en)
 
 *The story behind it (in Chinese): [From textbook maps to 1k GitHub stars](https://deanchen.me/history/atlas/2026/10/25/jiangshan-map-story.html)*
 
@@ -21,7 +21,7 @@
 </p>
 
 <p align="center">
-  <a href="https://deanchen.me/jiangshan-map/?lang=en">
+  <a href="https://map.xhja.cn/?lang=en">
     <img src="assets/hero_demo_en.webp" alt="Chronicles of the Realm — 15s Interactive Overview (Warring States Unification, 2,400-Year Dynastic Scrubbing, Chang'an Place Genealogy & Su Shi's Exile Route)" width="100%" />
   </a>
 </p>
@@ -49,7 +49,7 @@ Have you ever wondered while reading Chinese history or classical poetry:
 - **Zoomable Timeline**: Drag the handles at either end of the timeline inward to zoom into one stretch of history (handy for short eras such as Qin, the Three Kingdoms, or the Five Dynasties); double-click the timeline to return to the full overview.
 - **Voice Narration**: Turn on the narration toggle next to the play button and autoplay reads out each year and its events in the browser's built-in voice; it also follows a person's chronicle on autoplay (requires a browser with speech synthesis).
 
-> [Try It Live: Ming Dynasty Yongle 13 (1415 CE) · Two Capitals, Thirteen Provinces & "Yingtian Prefecture" Inspection →](https://deanchen.me/jiangshan-map/?year=1415&zoom=1.75&center=115.8,33.2&hover=Yingtian%20Prefecture&lang=en)
+> [Try It Live: Ming Dynasty Yongle 13 (1415 CE) · Two Capitals, Thirteen Provinces & "Yingtian Prefecture" Inspection →](https://map.xhja.cn/?year=1415&zoom=1.75&center=115.8,33.2&hover=Yingtian%20Prefecture&lang=en)
 
 ![Ming Dynasty 1415 CE · Yingtian Prefecture Hover Preview](assets/preview_1415_ming_yingtian_en.webp)
 
@@ -62,7 +62,7 @@ Have you ever wondered while reading Chinese history or classical poetry:
 - **Site-Specific Landmark Events**: Beneath each dynasty row, inspect major historical events that took place right on that spot (e.g., *Shang Yang's Reforms* and *Qin's Unification* at Xianyang, *Guan Yu Flooding the Seven Armies* at Fancheng, the *Xuanwu Gate Incident* at Chang'an, or *Yue Fei's Martyrdom* at Lin'an). Click the **`Chronicles`** pill in the top-right of the card to filter for dynasties with major events, and click any event to time-travel straight to that year!
 - **Strategic Mountain Passes & Poetic / Battlefield Landmarks**: Explore famous mountain passes—including *Hangu Pass*, *Tongguan*, *Jianmen Pass*, *Yanmen Pass*, *Yumen Pass*, *Yangguan*, and *Shanhai Pass*—rendered with traditional *Hanque* gatehouse icons and strategic terrain notes, alongside famous battlefields and literary landmarks such as *Red Cliffs (Chibi)*, *Gaixia*, *Wuzhang Plains*, *Orchid Pavilion (Lanting)*, *Yueyang Tower*, *Pavilion of Prince Teng*, *Languan Pass*, *Loulan*, *Lop Nur*, and *Issyk-Kul*.
 
-> [Try It Live: High Tang Kaiyuan 29 (741 CE) · Open Chang'an's 2,400-Year Genealogy Card →](https://deanchen.me/jiangshan-map/?year=741&place=Chang'an&lang=en)
+> [Try It Live: High Tang Kaiyuan 29 (741 CE) · Open Chang'an's 2,400-Year Genealogy Card →](https://map.xhja.cn/?year=741&place=Chang'an&lang=en)
 
 ![High Tang 741 CE · Chang'an Trace Place & Key Events](assets/preview_741_tang_trace_en.webp)
 
@@ -83,7 +83,7 @@ Click the top-left **Universal Search Box** (with a rotatable `e.g.` figure prev
 
 Each time you step to the next event (`‹ / ›`, `← / →`, or `Space` to auto-play), **the timeline year, reigning monarch, imperial era, and dynastic territories evolve in sync with their footsteps**, highlighting the active transition arc alongside bilingual primary-source excerpts and poems written at that exact site.
 
-> [Try It Live: Su Dongpo's Life & Exile Across Song China (1037–1101 CE) →](https://deanchen.me/jiangshan-map/?person=sushi&lang=en)
+> [Try It Live: Su Dongpo's Life & Exile Across Song China (1037–1101 CE) →](https://map.xhja.cn/?person=sushi&lang=en)
 
 ![Person Chronicle · Su Shi's Life & Exile Route](assets/preview_journey_sushi_en.webp)
 
@@ -95,7 +95,7 @@ Think you know Chinese historical geography? Click **`Quiz ›`** in the corner 
 - **Dynastic Historical Clues + Blind Map Pinpointing**: City labels are hidden while the prompt asks you to locate an ancient city across a 10-round progressive difficulty deck—accompanied by **dynastic historical clues** (without spoiling the modern city name). Drop your pin to preview and adjust, click the **`Confirm ↵`** chip next to the pin to lock in your answer with concentric distance score rings, and earn points based on great-circle distance to the true coordinates!
 - Complete 10 rounds to receive a traditional imperial cartographic title such as **Grand Historian & Master Cartographer (太史令 · 舆图大家)**, **Director of the Bureau of Operations (职方郎中)**, or **Prefectural Retainer (州郡从事)**.
 
-> [Try It Live: Western Han Emperor Wu, Yuanshou 2 (121 BCE) · Start the Map Pinpoint Challenge →](https://deanchen.me/jiangshan-map/?year=-121&quiz=locate&lang=en)
+> [Try It Live: Western Han Emperor Wu, Yuanshou 2 (121 BCE) · Start the Map Pinpoint Challenge →](https://map.xhja.cn/?year=-121&quiz=locate&lang=en)
 
 ![Western Han 121 BCE · Map Pinpoint Challenge Preview](assets/preview_quiz_challenge_en.webp)
 
@@ -117,14 +117,14 @@ Think you know Chinese historical geography? Click **`Quiz ›`** in the corner 
 ### Shareable Deep Links
 
 Append query parameters to share any historical moment, battle, city genealogy, or multi-stop route:
-- **Jump to a specific year or territorial shift**: [`?year=-403&lang=en`](https://deanchen.me/jiangshan-map/?year=-403&lang=en) (403 BCE · Partition of Jin) / [`?year=-121&lang=en`](https://deanchen.me/jiangshan-map/?year=-121&lang=en) (121 BCE · Huo Qubing opens the Hexi Corridor) / [`?year=648&lang=en`](https://deanchen.me/jiangshan-map/?year=648&lang=en) (648 CE · Four Garrisons of Anxi & Wang Xuance in India) / [`?year=1288&lang=en`](https://deanchen.me/jiangshan-map/?year=1288&lang=en) (1288 CE · Yuan Xuanzhengyuan over Tibet) / [`?year=1881&lang=en`](https://deanchen.me/jiangshan-map/?year=1881&lang=en) (1881 CE · Zeng Jize recovers Ili) / [`?year=1945&lang=en`](https://deanchen.me/jiangshan-map/?year=1945&lang=en) (1945 CE · Retrocession of Taiwan)
-- **Pinpoint a famous battle**: [`?year=-260&place=长平&lang=en`](https://deanchen.me/jiangshan-map/?year=-260&place=长平&lang=en) (Battle of Changping) / [`?year=208&place=赤壁&lang=en`](https://deanchen.me/jiangshan-map/?year=208&place=赤壁&lang=en) (Battle of Red Cliffs) / [`?year=383&place=淝水&lang=en`](https://deanchen.me/jiangshan-map/?year=383&place=淝水&lang=en) (Battle of Fei River)
-- **Inspect a city's 2,400-year genealogy**: [`?year=741&place=长安&lang=en`](https://deanchen.me/jiangshan-map/?year=741&place=长安&lang=en) (Chang'an / Xi'an) / [`?year=1415&place=应天府&lang=en`](https://deanchen.me/jiangshan-map/?year=1415&place=应天府&lang=en) (Jiankang / Yingtian / Nanjing) / [`?year=819&place=蓝关&lang=en`](https://deanchen.me/jiangshan-map/?year=819&place=蓝关&lang=en) (Han Yu at Languan Pass)
-- **Plot a custom poetic or campaign route**: [`?year=763&place=剑外,巴峡,巫峡,襄阳,洛阳&lang=en`](https://deanchen.me/jiangshan-map/?year=763&place=剑外,巴峡,巫峡,襄阳,洛阳&lang=en) (Du Fu's 763 CE homeward route) / [`?year=1079,1080,1094,1097&place=湖州,黄州,惠州,儋州&lang=en`](https://deanchen.me/jiangshan-map/?year=1079,1080,1094,1097&place=湖州,黄州,惠州,儋州&lang=en) (Su Shi's multi-year exile route across Huzhou, Huangzhou, Huizhou, and Danzhou)
-- **Open a person's spatio-temporal chronicle**: [`?person=qinshihuang&lang=en`](https://deanchen.me/jiangshan-map/?person=qinshihuang&lang=en) (Qin Shi Huang) / [`?person=zhangqian&lang=en`](https://deanchen.me/jiangshan-map/?person=zhangqian&lang=en) (Zhang Qian) / [`?person=zhugeliang&lang=en`](https://deanchen.me/jiangshan-map/?person=zhugeliang&lang=en) (Zhuge Liang) / [`?person=xuanzang&lang=en`](https://deanchen.me/jiangshan-map/?person=xuanzang&lang=en) (Xuanzang) / [`?person=libai&lang=en`](https://deanchen.me/jiangshan-map/?person=libai&lang=en) (Li Bai) / [`?person=sushi&lang=en`](https://deanchen.me/jiangshan-map/?person=sushi&lang=en) (Su Shi) / [`?person=wangyangming&lang=en`](https://deanchen.me/jiangshan-map/?person=wangyangming&lang=en) (Wang Yangming)
-- **Compare several people or follow an event**: [`?person=libai,dufu&lang=en`](https://deanchen.me/jiangshan-map/?person=libai,dufu&lang=en) (Li Bai & Du Fu) / [`?person=caocao,liubei,sunquan&lang=en`](https://deanchen.me/jiangshan-map/?person=caocao,liubei,sunquan&lang=en) (Cao Cao, Liu Bei & Sun Quan) / [`?event=qintongyi&lang=en`](https://deanchen.me/jiangshan-map/?event=qintongyi&lang=en) (Qin's Conquest of the Six States) / [`?event=chuhan&lang=en`](https://deanchen.me/jiangshan-map/?event=chuhan&lang=en) (Chu–Han Contention) / [`?event=anshi&lang=en`](https://deanchen.me/jiangshan-map/?event=anshi&lang=en) (An Lushan Rebellion) / [`?event=jingkang&lang=en`](https://deanchen.me/jiangshan-map/?event=jingkang&lang=en) (Jingkang Catastrophe)
-- **Start a quiz round**: [`?year=-121&quiz=locate&lang=en`](https://deanchen.me/jiangshan-map/?year=-121&quiz=locate&lang=en) (Map Pinpoint Challenge)
-- **Switch UI language**: [`?lang=en`](https://deanchen.me/jiangshan-map/?lang=en) (English) / [`?lang=zh-tw`](https://deanchen.me/jiangshan-map/?lang=zh-tw) (Traditional Chinese) / [`/`](https://deanchen.me/jiangshan-map/) (Simplified Chinese)
+- **Jump to a specific year or territorial shift**: [`?year=-403&lang=en`](https://map.xhja.cn/?year=-403&lang=en) (403 BCE · Partition of Jin) / [`?year=-121&lang=en`](https://map.xhja.cn/?year=-121&lang=en) (121 BCE · Huo Qubing opens the Hexi Corridor) / [`?year=648&lang=en`](https://map.xhja.cn/?year=648&lang=en) (648 CE · Four Garrisons of Anxi & Wang Xuance in India) / [`?year=1288&lang=en`](https://map.xhja.cn/?year=1288&lang=en) (1288 CE · Yuan Xuanzhengyuan over Tibet) / [`?year=1881&lang=en`](https://map.xhja.cn/?year=1881&lang=en) (1881 CE · Zeng Jize recovers Ili) / [`?year=1945&lang=en`](https://map.xhja.cn/?year=1945&lang=en) (1945 CE · Retrocession of Taiwan)
+- **Pinpoint a famous battle**: [`?year=-260&place=长平&lang=en`](https://map.xhja.cn/?year=-260&place=长平&lang=en) (Battle of Changping) / [`?year=208&place=赤壁&lang=en`](https://map.xhja.cn/?year=208&place=赤壁&lang=en) (Battle of Red Cliffs) / [`?year=383&place=淝水&lang=en`](https://map.xhja.cn/?year=383&place=淝水&lang=en) (Battle of Fei River)
+- **Inspect a city's 2,400-year genealogy**: [`?year=741&place=长安&lang=en`](https://map.xhja.cn/?year=741&place=长安&lang=en) (Chang'an / Xi'an) / [`?year=1415&place=应天府&lang=en`](https://map.xhja.cn/?year=1415&place=应天府&lang=en) (Jiankang / Yingtian / Nanjing) / [`?year=819&place=蓝关&lang=en`](https://map.xhja.cn/?year=819&place=蓝关&lang=en) (Han Yu at Languan Pass)
+- **Plot a custom poetic or campaign route**: [`?year=763&place=剑外,巴峡,巫峡,襄阳,洛阳&lang=en`](https://map.xhja.cn/?year=763&place=剑外,巴峡,巫峡,襄阳,洛阳&lang=en) (Du Fu's 763 CE homeward route) / [`?year=1079,1080,1094,1097&place=湖州,黄州,惠州,儋州&lang=en`](https://map.xhja.cn/?year=1079,1080,1094,1097&place=湖州,黄州,惠州,儋州&lang=en) (Su Shi's multi-year exile route across Huzhou, Huangzhou, Huizhou, and Danzhou)
+- **Open a person's spatio-temporal chronicle**: [`?person=qinshihuang&lang=en`](https://map.xhja.cn/?person=qinshihuang&lang=en) (Qin Shi Huang) / [`?person=zhangqian&lang=en`](https://map.xhja.cn/?person=zhangqian&lang=en) (Zhang Qian) / [`?person=zhugeliang&lang=en`](https://map.xhja.cn/?person=zhugeliang&lang=en) (Zhuge Liang) / [`?person=xuanzang&lang=en`](https://map.xhja.cn/?person=xuanzang&lang=en) (Xuanzang) / [`?person=libai&lang=en`](https://map.xhja.cn/?person=libai&lang=en) (Li Bai) / [`?person=sushi&lang=en`](https://map.xhja.cn/?person=sushi&lang=en) (Su Shi) / [`?person=wangyangming&lang=en`](https://map.xhja.cn/?person=wangyangming&lang=en) (Wang Yangming)
+- **Compare several people or follow an event**: [`?person=libai,dufu&lang=en`](https://map.xhja.cn/?person=libai,dufu&lang=en) (Li Bai & Du Fu) / [`?person=caocao,liubei,sunquan&lang=en`](https://map.xhja.cn/?person=caocao,liubei,sunquan&lang=en) (Cao Cao, Liu Bei & Sun Quan) / [`?event=qintongyi&lang=en`](https://map.xhja.cn/?event=qintongyi&lang=en) (Qin's Conquest of the Six States) / [`?event=chuhan&lang=en`](https://map.xhja.cn/?event=chuhan&lang=en) (Chu–Han Contention) / [`?event=anshi&lang=en`](https://map.xhja.cn/?event=anshi&lang=en) (An Lushan Rebellion) / [`?event=jingkang&lang=en`](https://map.xhja.cn/?event=jingkang&lang=en) (Jingkang Catastrophe)
+- **Start a quiz round**: [`?year=-121&quiz=locate&lang=en`](https://map.xhja.cn/?year=-121&quiz=locate&lang=en) (Map Pinpoint Challenge)
+- **Switch UI language**: [`?lang=en`](https://map.xhja.cn/?lang=en) (English) / [`?lang=zh-tw`](https://map.xhja.cn/?lang=zh-tw) (Traditional Chinese) / [`/`](https://map.xhja.cn/) (Simplified Chinese)
 
 ### Embed in Your Page
 
@@ -136,7 +136,7 @@ Put any view of the atlas into a blog post, Notion page, or course site:
 
 ```html
 <iframe
-  src="https://deanchen.me/jiangshan-map/?embed=1&year=1104&trace=101.778,36.617&from=1072&to=1126&lang=en"
+  src="https://map.xhja.cn/?embed=1&year=1104&trace=101.778,36.617&from=1072&to=1126&lang=en"
   width="100%" height="480" loading="lazy" style="border:0"
   title="Chronicles of the Realm · 1104 CE, Northern Song"></iframe>
 ```
@@ -185,9 +185,9 @@ WeChat Official Accounts, Zhihu, and Xiaohongshu do not allow iframes; share the
 
 | Mode | Example URL | Automatic Rendering Behavior |
 | :--- | :--- | :--- |
-| **Single-Point Pinpoint (0D)** | [`?year=819&place=蓝关&lang=en`](https://deanchen.me/jiangshan-map/?year=819&place=蓝关&lang=en)<br>*(Han Yu's 819 CE exile poem at Languan Pass)* | Jumps to Tang Yuanhe 14 (819 CE), drops a pin on Languan Pass in the Qinling Mountains, and opens its 2,400-year administrative genealogy card |
-| **Same-Year Multi-Stop Route (1D)** | [`?year=763&place=剑外,巴峡,巫峡,襄阳,洛阳&lang=en`](https://deanchen.me/jiangshan-map/?year=763&place=剑外,巴峡,巫峡,襄阳,洛阳&lang=en)<br>*(Du Fu's 763 CE poem on recapturing Henan & Hebei)* | Plots numbered vermilion arcs `1` → `5` across the 763 CE Tang map and auto-fits the viewport; click any stop to inspect its genealogy |
-| **Multi-Year Space-Time Route (4D)** | [`?year=1079,1080,1094,1097&place=湖州,黄州,惠州,儋州&lang=en`](https://deanchen.me/jiangshan-map/?year=1079,1080,1094,1097&place=湖州,黄州,惠州,儋州&lang=en)<br>*(Su Shi's career across Huzhou, Huangzhou, Huizhou & Danzhou)* | Pairs `year[i]` with `place[i]`, labeling stops with their historical years and switching the underlying dynastic map whenever you click a stop |
+| **Single-Point Pinpoint (0D)** | [`?year=819&place=蓝关&lang=en`](https://map.xhja.cn/?year=819&place=蓝关&lang=en)<br>*(Han Yu's 819 CE exile poem at Languan Pass)* | Jumps to Tang Yuanhe 14 (819 CE), drops a pin on Languan Pass in the Qinling Mountains, and opens its 2,400-year administrative genealogy card |
+| **Same-Year Multi-Stop Route (1D)** | [`?year=763&place=剑外,巴峡,巫峡,襄阳,洛阳&lang=en`](https://map.xhja.cn/?year=763&place=剑外,巴峡,巫峡,襄阳,洛阳&lang=en)<br>*(Du Fu's 763 CE poem on recapturing Henan & Hebei)* | Plots numbered vermilion arcs `1` → `5` across the 763 CE Tang map and auto-fits the viewport; click any stop to inspect its genealogy |
+| **Multi-Year Space-Time Route (4D)** | [`?year=1079,1080,1094,1097&place=湖州,黄州,惠州,儋州&lang=en`](https://map.xhja.cn/?year=1079,1080,1094,1097&place=湖州,黄州,惠州,儋州&lang=en)<br>*(Su Shi's career across Huzhou, Huangzhou, Huizhou & Danzhou)* | Pairs `year[i]` with `place[i]`, labeling stops with their historical years and switching the underlying dynastic map whenever you click a stop |
 
 ### 2. CLI One-Command Screenshot & JSON Lookup (for Agent Tool Calls)
 

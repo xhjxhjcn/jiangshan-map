@@ -1,0 +1,9 @@
+/* 站内自托管字体：替代 Google Fonts，境内可直接访问。
+   Ma Shan Zheng 只保留站点实际用到的字符子集，17.6 KB。 */
+@font-face {
+  font-family: 'Ma Shan Zheng';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/ma-shan-zheng.woff2') format('woff2');
+}

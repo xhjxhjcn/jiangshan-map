@@ -493,17 +493,17 @@ async function runCoreDataSuite(ctx) {
   assert(fs.existsSync(path.join(ROOT, 'sitemap.xml')), 'Missing sitemap.xml at repository root');
   assert(fs.existsSync(path.join(ROOT, 'robots.txt')), 'Missing robots.txt at repository root');
   assert(
-    indexHtml.includes('href="https://deanchen.me/jiangshan-map/"') &&
+    indexHtml.includes('href="https://map.xhja.cn/"') &&
       indexHtml.includes('"@type": "FAQPage"') &&
-      sitemapXml.includes('<loc>https://deanchen.me/jiangshan-map/</loc>') &&
+      sitemapXml.includes('<loc>https://map.xhja.cn/</loc>') &&
       robotsTxt.includes('User-agent: Baiduspider') &&
       robotsTxt.includes('User-agent: Bytespider') &&
-      robotsTxt.includes('Sitemap: https://deanchen.me/jiangshan-map/sitemap.xml') &&
+      robotsTxt.includes('Sitemap: https://map.xhja.cn/sitemap.xml') &&
       !indexHtml.toLowerCase().includes('deanchensj.github.io') &&
       !sitemapXml.toLowerCase().includes('deanchensj.github.io') &&
       !robotsTxt.toLowerCase().includes('deanchensj.github.io') &&
       !appCode.toLowerCase().includes('deanchensj.github.io'),
-    'SEO/GEO files (index.html, sitemap.xml, robots.txt, app.js) must canonicalize to https://deanchen.me/jiangshan-map/ and allow Baiduspider/Bytespider'
+    'SEO/GEO files (index.html, sitemap.xml, robots.txt, app.js) must canonicalize to https://map.xhja.cn/ and allow Baiduspider/Bytespider'
   );
   const topicsDir = path.join(ROOT, 'topics');
   assert(
@@ -528,7 +528,7 @@ async function runCoreDataSuite(ctx) {
     const tfPath = path.join(topicsDir, tf);
     assert(fs.existsSync(tfPath), `Missing static SEO topic page: topics/${tf}`);
     const tfHtml = fs.readFileSync(tfPath, 'utf8');
-    const expectedCanon = `https://deanchen.me/jiangshan-map/topics/${tf}`;
+    const expectedCanon = `https://map.xhja.cn/topics/${tf}`;
     assert(
       tfHtml.includes(`rel="canonical" href="${expectedCanon}"`) &&
         tfHtml.includes('application/ld+json') &&

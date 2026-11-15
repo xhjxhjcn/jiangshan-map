@@ -429,7 +429,7 @@ async function runApiSearchSuite(ctx) {
     ).trim();
     const decodedCliOut = decodeURIComponent(cliOut);
     assert(
-      decodedCliOut.includes('URL: https://deanchen.me/jiangshan-map/?year=1079,1080,1094,1097&place=湖州,黄州,惠州,儋州'),
+      decodedCliOut.includes('URL: https://map.xhja.cn/?year=1079,1080,1094,1097&place=湖州,黄州,惠州,儋州'),
       `Unexpected jiangshan.py CLI output: ${decodedCliOut}`
     );
   }

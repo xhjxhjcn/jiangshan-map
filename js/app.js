@@ -1978,7 +1978,7 @@
       if (ghBtn) {
         ghBtn.title =
           this.locale === 'en'
-            ? 'Star DeanChensj/jiangshan-map on GitHub'
+            ? 'Star xhjxhjcn/jiangshan-map on GitHub'
             : this._zh('在 GitHub 上为「江山时序」点亮 Star');
       }
       const moreBtn = this._id('act-more-menu');
@@ -1997,7 +1997,7 @@
       setMoreCopy('lbl-more-story', 'Making-Of Essay (ZH)', '创作手记 · 幕后故事');
       setMoreCopy('sub-more-story', 'From textbook maps to Jiangshan', '从课本插图到开源历史地图');
       setMoreCopy('lbl-more-about', 'About & More Projects', '作者博客 · 更多作品');
-      setMoreCopy('sub-more-about', 'deanchen.me', 'deanchen.me');
+      setMoreCopy('sub-more-about', 'By DeanChensj (GPL-3.0)', '原作者 DeanChensj · GPL-3.0');
       this._updateMusicUi();
       this._updateAutoplayUi();
       this._updatePlaySpeedUi();
@@ -5848,7 +5848,7 @@
     // ---------------- Chronicle Sidebar ----------------
     _syncDocumentSeoMeta() {
       if (typeof document === 'undefined') return;
-      const baseSiteUrl = 'https://deanchen.me/jiangshan-map/';
+      const baseSiteUrl = 'https://map.xhja.cn/';
       const isEn = this.locale === 'en';
       const cur = this.dynasties && this.dynasties[this.dynastyIdx];
       let pageTitle = isEn
@@ -5923,7 +5923,7 @@
         'aria-label',
         'Historical Dynasties, Person Chronicles & Strategic Passes Directory'
       );
-      const baseSiteUrl = 'https://deanchen.me/jiangshan-map/';
+      const baseSiteUrl = 'https://map.xhja.cn/';
       const dynItems = (this.dynasties || [])
         .map((d) => {
           const dName = this.dynastyName(d);

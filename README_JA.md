@@ -6,7 +6,7 @@
 
 **戦国時代（紀元前 403 年）から現在までの、中国のインタラクティブな歴史地図 — 時間をスクロールし、古都の歴史をたどり、歴史上の人物の足跡を追いかけられます**
 
-[**ライブデモを試す（英語 UI）→ https://deanchen.me/jiangshan-map/?lang=en**](https://deanchen.me/jiangshan-map/?lang=en)
+[**ライブデモを試す（英語 UI）→ https://map.xhja.cn/?lang=en**](https://map.xhja.cn/?lang=en)
 
 *誕生の経緯（中国語）：[教科書の地図から GitHub の 1k スターまで](https://deanchen.me/history/atlas/2026/10/25/jiangshan-map-story.html)*
 
@@ -21,7 +21,7 @@
 </p>
 
 <p align="center">
-  <a href="https://deanchen.me/jiangshan-map/?lang=en">
+  <a href="https://map.xhja.cn/?lang=en">
     <img src="assets/hero_demo_en.webp" alt="Chronicles of the Realm — 15 秒のインタラクティブな概要（戦国の統一、2,400 年にわたる王朝のスクロール、長安の地名の系譜、蘇軾の流謫の道のり）" width="100%" />
   </a>
 </p>
@@ -49,7 +49,7 @@
 - **ズームできるタイムライン**：タイムライン両端のハンドルを内側へドラッグすると、その期間だけを拡大できます（秦、三国、五代のような短い時代に便利です）。タイムラインをダブルクリックすると全体表示に戻ります。
 - **音声ナレーション**：再生ボタンの横にあるナレーションの切り替えをオンにすると、自動再生に合わせて、ブラウザー内蔵の音声がその年と出来事を読み上げます。人物の足跡の自動再生でも使えます（音声合成に対応したブラウザーが必要です）。
 
-> [ライブで試す：明の永楽 13 年（1415 年）· 両京十三布政使司と「Yingtian Prefecture」の確認 →](https://deanchen.me/jiangshan-map/?year=1415&zoom=1.75&center=115.8,33.2&hover=Yingtian%20Prefecture&lang=en)
+> [ライブで試す：明の永楽 13 年（1415 年）· 両京十三布政使司と「Yingtian Prefecture」の確認 →](https://map.xhja.cn/?year=1415&zoom=1.75&center=115.8,33.2&hover=Yingtian%20Prefecture&lang=en)
 
 ![明 1415 年 · Yingtian Prefecture のホバーのプレビュー](assets/preview_1415_ming_yingtian_en.webp)
 
@@ -62,7 +62,7 @@
 - **その地で起きた出来事**：それぞれの王朝の行の下で、まさにその場所で起きた大きな歴史上の出来事を確認できます（例：咸陽での *商鞅の変法* と *秦の統一*、樊城での *関羽の水攻め（七軍を水没させる）*、長安での *玄武門の変*、臨安での *岳飛の死*）。カードの右上にある **`Chronicles`** のピルをクリックすると大きな出来事のある王朝だけに絞り込め、どの出来事をクリックしてもその年へタイムトラベルできます！
 - **戦略上の峠と、詩・戦場の名所**：*函谷関*、*潼関*、*剣門関*、*雁門関*、*玉門関*、*陽関*、*山海関* などの有名な峠を探索できます。これらは伝統的な *漢闕* の門楼のアイコンと、戦略上の地形のメモとともに描かれます。あわせて、*赤壁*、*垓下*、*五丈原*、*蘭亭*、*岳陽楼*、*滕王閣*、*藍関*、*楼蘭*、*ロプノール*、*イシク・クル* などの有名な戦場と文学の名所もあります。
 
-> [ライブで試す：盛唐の開元 29 年（741 年）· 長安の 2,400 年の系譜カードを開く →](https://deanchen.me/jiangshan-map/?year=741&place=Chang'an&lang=en)
+> [ライブで試す：盛唐の開元 29 年（741 年）· 長安の 2,400 年の系譜カードを開く →](https://map.xhja.cn/?year=741&place=Chang'an&lang=en)
 
 ![盛唐 741 年 · 長安の Trace Place と Key Events](assets/preview_741_tang_trace_en.webp)
 
@@ -83,7 +83,7 @@
 
 次の出来事に進むたびに（`‹ / ›`、`← / →`、または `Space` で自動再生）、**タイムラインの年、在位中の君主、元号、王朝の領土が、その人物の足取りに合わせて変わります**。現在の移動の弧が強調され、まさにその場所で書かれた 2 か国語の一次史料の抜粋や詩も表示されます。
 
-> [ライブで試す：蘇東坡の生涯と流謫の足跡（1037～1101 年）→](https://deanchen.me/jiangshan-map/?person=sushi&lang=en)
+> [ライブで試す：蘇東坡の生涯と流謫の足跡（1037～1101 年）→](https://map.xhja.cn/?person=sushi&lang=en)
 
 ![Person Chronicle · 蘇軾の生涯と流謫の道のり](assets/preview_journey_sushi_en.webp)
 
@@ -95,7 +95,7 @@
 - **王朝の歴史の手がかり + 白地図でのピン留め**：都市のラベルが隠され、難易度が段階的に上がる 10 ラウンドの出題で、古都の場所を当てるよう求められます。**王朝の歴史の手がかり** が添えられます（現代の都市名はネタバレしません）。ピンを置いてプレビューと調整をし、ピンの横の **`Confirm ↵`** をクリックすると答えが確定し、同心円の距離のスコアの輪が表示されます。本当の座標までの大圏距離にもとづいて得点できます！
 - 10 ラウンドを終えると、**太史令 · 舆图大家（Grand Historian & Master Cartographer）**、**职方郎中（Director of the Bureau of Operations）**、**州郡从事（Prefectural Retainer）** のような、伝統的な朝廷の地図に関する称号が授けられます。
 
-> [ライブで試す：前漢の武帝、元狩 2 年（紀元前 121 年）· Map Pinpoint Challenge を始める →](https://deanchen.me/jiangshan-map/?year=-121&quiz=locate&lang=en)
+> [ライブで試す：前漢の武帝、元狩 2 年（紀元前 121 年）· Map Pinpoint Challenge を始める →](https://map.xhja.cn/?year=-121&quiz=locate&lang=en)
 
 ![前漢 紀元前 121 年 · Map Pinpoint Challenge のプレビュー](assets/preview_quiz_challenge_en.webp)
 
@@ -117,14 +117,14 @@
 ### 共有できるディープリンク
 
 クエリパラメーターを付けると、どんな歴史の瞬間、戦い、都市の系譜、複数地点のルートでも共有できます。
-- **特定の年や領土の変化にジャンプ**：[`?year=-403&lang=en`](https://deanchen.me/jiangshan-map/?year=-403&lang=en)（紀元前 403 年 · 三家分晋）/ [`?year=-121&lang=en`](https://deanchen.me/jiangshan-map/?year=-121&lang=en)（紀元前 121 年 · 霍去病が河西回廊を開く）/ [`?year=648&lang=en`](https://deanchen.me/jiangshan-map/?year=648&lang=en)（648 年 · 安西四鎮とインドの王玄策）/ [`?year=1288&lang=en`](https://deanchen.me/jiangshan-map/?year=1288&lang=en)（1288 年 · 元の宣政院によるチベットの管轄）/ [`?year=1881&lang=en`](https://deanchen.me/jiangshan-map/?year=1881&lang=en)（1881 年 · 曽紀沢がイリを回復）/ [`?year=1945&lang=en`](https://deanchen.me/jiangshan-map/?year=1945&lang=en)（1945 年 · 台湾の返還）
-- **有名な戦いの場所を示す**：[`?year=-260&place=长平&lang=en`](https://deanchen.me/jiangshan-map/?year=-260&place=长平&lang=en)（長平の戦い）/ [`?year=208&place=赤壁&lang=en`](https://deanchen.me/jiangshan-map/?year=208&place=赤壁&lang=en)（赤壁の戦い）/ [`?year=383&place=淝水&lang=en`](https://deanchen.me/jiangshan-map/?year=383&place=淝水&lang=en)（淝水の戦い）
-- **都市の 2,400 年の系譜を確認**：[`?year=741&place=长安&lang=en`](https://deanchen.me/jiangshan-map/?year=741&place=长安&lang=en)（長安 / 西安）/ [`?year=1415&place=应天府&lang=en`](https://deanchen.me/jiangshan-map/?year=1415&place=应天府&lang=en)（建康 / 応天 / 南京）/ [`?year=819&place=蓝关&lang=en`](https://deanchen.me/jiangshan-map/?year=819&place=蓝关&lang=en)（藍関の韓愈）
-- **独自の詩や遠征のルートを描く**：[`?year=763&place=剑外,巴峡,巫峡,襄阳,洛阳&lang=en`](https://deanchen.me/jiangshan-map/?year=763&place=剑外,巴峡,巫峡,襄阳,洛阳&lang=en)（763 年の杜甫の帰郷の道のり）/ [`?year=1079,1080,1094,1097&place=湖州,黄州,惠州,儋州&lang=en`](https://deanchen.me/jiangshan-map/?year=1079,1080,1094,1097&place=湖州,黄州,惠州,儋州&lang=en)（湖州、黄州、恵州、儋州にわたる、蘇軾の何年にもわたる流謫の道のり）
-- **人物の時空の年代記を開く**：[`?person=qinshihuang&lang=en`](https://deanchen.me/jiangshan-map/?person=qinshihuang&lang=en)（始皇帝）/ [`?person=zhangqian&lang=en`](https://deanchen.me/jiangshan-map/?person=zhangqian&lang=en)（張騫）/ [`?person=zhugeliang&lang=en`](https://deanchen.me/jiangshan-map/?person=zhugeliang&lang=en)（諸葛亮）/ [`?person=xuanzang&lang=en`](https://deanchen.me/jiangshan-map/?person=xuanzang&lang=en)（玄奘）/ [`?person=libai&lang=en`](https://deanchen.me/jiangshan-map/?person=libai&lang=en)（李白）/ [`?person=sushi&lang=en`](https://deanchen.me/jiangshan-map/?person=sushi&lang=en)（蘇軾）/ [`?person=wangyangming&lang=en`](https://deanchen.me/jiangshan-map/?person=wangyangming&lang=en)（王陽明）
-- **複数人物の比較や事件をたどる**：[`?person=libai,dufu&lang=en`](https://deanchen.me/jiangshan-map/?person=libai,dufu&lang=en)（李白と杜甫）/ [`?person=caocao,liubei,sunquan&lang=en`](https://deanchen.me/jiangshan-map/?person=caocao,liubei,sunquan&lang=en)（曹操・劉備・孫権）/ [`?event=qintongyi&lang=en`](https://deanchen.me/jiangshan-map/?event=qintongyi&lang=en)（秦の六国統一）/ [`?event=chuhan&lang=en`](https://deanchen.me/jiangshan-map/?event=chuhan&lang=en)（楚漢戦争）/ [`?event=anshi&lang=en`](https://deanchen.me/jiangshan-map/?event=anshi&lang=en)（安史の乱）/ [`?event=jingkang&lang=en`](https://deanchen.me/jiangshan-map/?event=jingkang&lang=en)（靖康の変）
-- **クイズを始める**：[`?year=-121&quiz=locate&lang=en`](https://deanchen.me/jiangshan-map/?year=-121&quiz=locate&lang=en)（Map Pinpoint Challenge）
-- **UI の言語を切り替える**：[`?lang=en`](https://deanchen.me/jiangshan-map/?lang=en)（英語）/ [`?lang=zh-tw`](https://deanchen.me/jiangshan-map/?lang=zh-tw)（繁体字中国語）/ [`/`](https://deanchen.me/jiangshan-map/)（簡体字中国語）
+- **特定の年や領土の変化にジャンプ**：[`?year=-403&lang=en`](https://map.xhja.cn/?year=-403&lang=en)（紀元前 403 年 · 三家分晋）/ [`?year=-121&lang=en`](https://map.xhja.cn/?year=-121&lang=en)（紀元前 121 年 · 霍去病が河西回廊を開く）/ [`?year=648&lang=en`](https://map.xhja.cn/?year=648&lang=en)（648 年 · 安西四鎮とインドの王玄策）/ [`?year=1288&lang=en`](https://map.xhja.cn/?year=1288&lang=en)（1288 年 · 元の宣政院によるチベットの管轄）/ [`?year=1881&lang=en`](https://map.xhja.cn/?year=1881&lang=en)（1881 年 · 曽紀沢がイリを回復）/ [`?year=1945&lang=en`](https://map.xhja.cn/?year=1945&lang=en)（1945 年 · 台湾の返還）
+- **有名な戦いの場所を示す**：[`?year=-260&place=长平&lang=en`](https://map.xhja.cn/?year=-260&place=长平&lang=en)（長平の戦い）/ [`?year=208&place=赤壁&lang=en`](https://map.xhja.cn/?year=208&place=赤壁&lang=en)（赤壁の戦い）/ [`?year=383&place=淝水&lang=en`](https://map.xhja.cn/?year=383&place=淝水&lang=en)（淝水の戦い）
+- **都市の 2,400 年の系譜を確認**：[`?year=741&place=长安&lang=en`](https://map.xhja.cn/?year=741&place=长安&lang=en)（長安 / 西安）/ [`?year=1415&place=应天府&lang=en`](https://map.xhja.cn/?year=1415&place=应天府&lang=en)（建康 / 応天 / 南京）/ [`?year=819&place=蓝关&lang=en`](https://map.xhja.cn/?year=819&place=蓝关&lang=en)（藍関の韓愈）
+- **独自の詩や遠征のルートを描く**：[`?year=763&place=剑外,巴峡,巫峡,襄阳,洛阳&lang=en`](https://map.xhja.cn/?year=763&place=剑外,巴峡,巫峡,襄阳,洛阳&lang=en)（763 年の杜甫の帰郷の道のり）/ [`?year=1079,1080,1094,1097&place=湖州,黄州,惠州,儋州&lang=en`](https://map.xhja.cn/?year=1079,1080,1094,1097&place=湖州,黄州,惠州,儋州&lang=en)（湖州、黄州、恵州、儋州にわたる、蘇軾の何年にもわたる流謫の道のり）
+- **人物の時空の年代記を開く**：[`?person=qinshihuang&lang=en`](https://map.xhja.cn/?person=qinshihuang&lang=en)（始皇帝）/ [`?person=zhangqian&lang=en`](https://map.xhja.cn/?person=zhangqian&lang=en)（張騫）/ [`?person=zhugeliang&lang=en`](https://map.xhja.cn/?person=zhugeliang&lang=en)（諸葛亮）/ [`?person=xuanzang&lang=en`](https://map.xhja.cn/?person=xuanzang&lang=en)（玄奘）/ [`?person=libai&lang=en`](https://map.xhja.cn/?person=libai&lang=en)（李白）/ [`?person=sushi&lang=en`](https://map.xhja.cn/?person=sushi&lang=en)（蘇軾）/ [`?person=wangyangming&lang=en`](https://map.xhja.cn/?person=wangyangming&lang=en)（王陽明）
+- **複数人物の比較や事件をたどる**：[`?person=libai,dufu&lang=en`](https://map.xhja.cn/?person=libai,dufu&lang=en)（李白と杜甫）/ [`?person=caocao,liubei,sunquan&lang=en`](https://map.xhja.cn/?person=caocao,liubei,sunquan&lang=en)（曹操・劉備・孫権）/ [`?event=qintongyi&lang=en`](https://map.xhja.cn/?event=qintongyi&lang=en)（秦の六国統一）/ [`?event=chuhan&lang=en`](https://map.xhja.cn/?event=chuhan&lang=en)（楚漢戦争）/ [`?event=anshi&lang=en`](https://map.xhja.cn/?event=anshi&lang=en)（安史の乱）/ [`?event=jingkang&lang=en`](https://map.xhja.cn/?event=jingkang&lang=en)（靖康の変）
+- **クイズを始める**：[`?year=-121&quiz=locate&lang=en`](https://map.xhja.cn/?year=-121&quiz=locate&lang=en)（Map Pinpoint Challenge）
+- **UI の言語を切り替える**：[`?lang=en`](https://map.xhja.cn/?lang=en)（英語）/ [`?lang=zh-tw`](https://map.xhja.cn/?lang=zh-tw)（繁体字中国語）/ [`/`](https://map.xhja.cn/)（簡体字中国語）
 
 ### 自分のページに埋め込む
 
@@ -136,7 +136,7 @@
 
 ```html
 <iframe
-  src="https://deanchen.me/jiangshan-map/?embed=1&year=1104&trace=101.778,36.617&from=1072&to=1126&lang=en"
+  src="https://map.xhja.cn/?embed=1&year=1104&trace=101.778,36.617&from=1072&to=1126&lang=en"
   width="100%" height="480" loading="lazy" style="border:0"
   title="Chronicles of the Realm · 1104 CE, Northern Song"></iframe>
 ```
@@ -185,9 +185,9 @@ WeChat の公式アカウント、Zhihu、Xiaohongshu では iframe が使えな
 
 | モード | URL の例 | 自動の描画の動作 |
 | :--- | :--- | :--- |
-| **単一地点（0D）** | [`?year=819&place=蓝关&lang=en`](https://deanchen.me/jiangshan-map/?year=819&place=蓝关&lang=en)<br>*（819 年、藍関での韓愈の流謫の詩）* | 唐の元和 14 年（819 年）にジャンプし、秦嶺山脈の藍関にピンを置いて、その 2,400 年の行政の系譜カードを開きます |
-| **同じ年の複数地点のルート（1D）** | [`?year=763&place=剑外,巴峡,巫峡,襄阳,洛阳&lang=en`](https://deanchen.me/jiangshan-map/?year=763&place=剑外,巴峡,巫峡,襄阳,洛阳&lang=en)<br>*（763 年、河南と河北の奪還を詠んだ杜甫の詩）* | 763 年の唐の地図の上に、`1` → `5` の番号付きの朱色の弧を描き、表示範囲を自動で合わせます。どの地点をクリックしても、その系譜を確認できます |
-| **複数年の時空のルート（4D）** | [`?year=1079,1080,1094,1097&place=湖州,黄州,惠州,儋州&lang=en`](https://deanchen.me/jiangshan-map/?year=1079,1080,1094,1097&place=湖州,黄州,惠州,儋州&lang=en)<br>*（湖州、黄州、恵州、儋州にわたる蘇軾の経歴）* | `year[i]` と `place[i]` を組にし、地点にその歴史上の年のラベルを付けて、地点をクリックするたびに下にある王朝の地図を切り替えます |
+| **単一地点（0D）** | [`?year=819&place=蓝关&lang=en`](https://map.xhja.cn/?year=819&place=蓝关&lang=en)<br>*（819 年、藍関での韓愈の流謫の詩）* | 唐の元和 14 年（819 年）にジャンプし、秦嶺山脈の藍関にピンを置いて、その 2,400 年の行政の系譜カードを開きます |
+| **同じ年の複数地点のルート（1D）** | [`?year=763&place=剑外,巴峡,巫峡,襄阳,洛阳&lang=en`](https://map.xhja.cn/?year=763&place=剑外,巴峡,巫峡,襄阳,洛阳&lang=en)<br>*（763 年、河南と河北の奪還を詠んだ杜甫の詩）* | 763 年の唐の地図の上に、`1` → `5` の番号付きの朱色の弧を描き、表示範囲を自動で合わせます。どの地点をクリックしても、その系譜を確認できます |
+| **複数年の時空のルート（4D）** | [`?year=1079,1080,1094,1097&place=湖州,黄州,惠州,儋州&lang=en`](https://map.xhja.cn/?year=1079,1080,1094,1097&place=湖州,黄州,惠州,儋州&lang=en)<br>*（湖州、黄州、恵州、儋州にわたる蘇軾の経歴）* | `year[i]` と `place[i]` を組にし、地点にその歴史上の年のラベルを付けて、地点をクリックするたびに下にある王朝の地図を切り替えます |
 
 ### 2. CLI のワンコマンドのスクリーンショットと JSON の検索（エージェントのツール呼び出し用）
 
