@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>王朝地图 · 中国历代王朝疆域地图总览（18个朝代·秦到清·可交互）</title>
+<meta name="description" content="中国历代王朝地图总览：战国、秦、西汉、东汉、三国、西晋、东晋十六国、南北朝、隋、唐、五代十国、北宋、南宋、元、明、清、民国、中华人民共和国共18个王朝（朝代）的疆域地图、都城与现代政区对照，每朝附多阶段版图快照、州郡政区沿革与编年大事，可拖动时间轴交互查看。" />
+<meta name="keywords" content="王朝地图, 中国王朝地图, 王朝疆域地图, 中国历代王朝地图, 中国王朝分布图, 朝代地图, 中国朝代地图, 历代朝代地图, 中国历代疆域地图, 中国历代版图, 秦朝地图, 汉朝地图, 唐朝地图, 宋朝地图, 元朝地图, 明朝地图, 清朝地图, 中国历史地图, 历史地图, 古代中国地图, 地图上的中国历史, 江山时序" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+<meta name="author" content="Jiangshan Atlas Contributors" />
+<link rel="canonical" href="https://map.xhja.cn/topics/dynasty-maps.html" />
+<link rel="alternate" hreflang="zh-CN" href="https://map.xhja.cn/topics/dynasty-maps.html" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="江山时序 · 中国历史地图时间轴" />
+<meta property="og:title" content="王朝地图 · 中国历代王朝疆域地图总览（18个朝代·秦到清·可交互）" />
+<meta property="og:description" content="中国历代王朝地图总览：战国、秦、西汉、东汉、三国、西晋、东晋十六国、南北朝、隋、唐、五代十国、北宋、南宋、元、明、清、民国、中华人民共和国共18个王朝（朝代）的疆域地图、都城与现代政区对照，每朝附多阶段版图快照、州郡政区沿革与编年大事，可拖动时间轴交互查看。" />
+<meta property="og:url" content="https://map.xhja.cn/topics/dynasty-maps.html" />
+<meta property="og:image" content="https://map.xhja.cn/assets/terrain_relief.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="王朝地图 · 中国历代王朝疆域地图总览（18个朝代·秦到清·可交互）" />
+<meta name="twitter:description" content="中国历代王朝地图总览：战国、秦、西汉、东汉、三国、西晋、东晋十六国、南北朝、隋、唐、五代十国、北宋、南宋、元、明、清、民国、中华人民共和国共18个王朝（朝代）的疆域地图、都城与现代政区对照，每朝附多阶段版图快照、州郡政区沿革与编年大事，可拖动时间轴交互查看。" />
+<meta name="theme-color" content="#f3eee4" />
+<link rel="stylesheet" href="../css/style.css?v=29413ab5" />
+<link rel="stylesheet" href="../css/fonts.css?v=1" />
+<style>
+  :root { --paper:#f3eee4; --ink:#2f2b26; --accent:#8c2f39; --muted:#6b6259; --line:#d8cfc0; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink);
+         font-family:'Noto Serif SC','Songti SC','SimSun',serif; line-height:1.85; }
+  .wrap { max-width:900px; margin:0 auto; padding:0 20px 72px; }
+  header.site { background:#fffdf8; border-bottom:1px solid var(--line); }
+  header.site .inner { max-width:900px; margin:0 auto; padding:14px 20px;
+       display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+  .seal { background:var(--accent); color:#fff; padding:3px 9px; border-radius:3px;
+          font-size:17px; letter-spacing:1px; }
+  header.site nav { margin-left:auto; display:flex; gap:16px; font-size:14px; }
+  header.site nav a { color:var(--muted); text-decoration:none; }
+  header.site nav a:hover { color:var(--accent); }
+  .kicker { display:inline-block; margin:34px 0 10px; color:var(--accent);
+            font-size:13px; letter-spacing:2px; }
+  h1 { font-size:30px; line-height:1.35; margin:0 0 10px; }
+  .en-sub { color:var(--muted); font-size:15px; margin:0 0 22px; }
+  .lede { font-size:16px; background:#fffdf8; border-left:3px solid var(--accent);
+          padding:14px 18px; margin:0 0 26px; }
+  h2 { font-size:21px; margin:38px 0 14px; padding-bottom:8px; border-bottom:1px solid var(--line); }
+  h3 { font-size:17px; margin:24px 0 8px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(250px,1fr)); gap:14px; }
+  .card { background:#fffdf8; border:1px solid var(--line); border-radius:6px;
+          padding:14px 16px; text-decoration:none; color:inherit; display:block; }
+  .card:hover { border-color:var(--accent); }
+  .card b { display:block; font-size:16px; margin-bottom:4px; }
+  .card span { color:var(--muted); font-size:13.5px; }
+  table { width:100%; border-collapse:collapse; margin:16px 0; font-size:14.5px; background:#fffdf8; }
+  th,td { border:1px solid var(--line); padding:9px 11px; text-align:left; vertical-align:top; }
+  th { background:#efe7d9; font-weight:600; }
+  a { color:var(--accent); }
+  footer.site-foot { margin-top:52px; padding-top:18px; border-top:1px solid var(--line);
+                     color:var(--muted); font-size:13.5px; }
+  @media (max-width:600px){ h1{font-size:24px;} .wrap{padding:0 14px 56px;} }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://map.xhja.cn/topics/dynasty-maps.html#page",
+      "url": "https://map.xhja.cn/topics/dynasty-maps.html",
+      "name": "王朝地图 · 中国历代王朝疆域地图总览（18个朝代·秦到清·可交互）",
+      "description": "中国历代王朝地图总览：战国、秦、西汉、东汉、三国、西晋、东晋十六国、南北朝、隋、唐、五代十国、北宋、南宋、元、明、清、民国、中华人民共和国共18个王朝（朝代）的疆域地图、都城与现代政区对照，每朝附多阶段版图快照、州郡政区沿革与编年大事，可拖动时间轴交互查看。",
+      "inLanguage": "zh-CN",
+      "isPartOf": { "@id": "https://map.xhja.cn/#website" },
+      "about": { "@type": "Thing", "name": "中国历代王朝疆域与行政区划地图" },
+      "hasPart": [
+        { "@type": "Article", "name": "战国地图", "url": "https://map.xhja.cn/topics/zhanguo.html" },
+        { "@type": "Article", "name": "秦地图", "url": "https://map.xhja.cn/topics/qin.html" },
+        { "@type": "Article", "name": "西汉地图", "url": "https://map.xhja.cn/topics/xihan.html" },
+        { "@type": "Article", "name": "东汉地图", "url": "https://map.xhja.cn/topics/donghan.html" },
+        { "@type": "Article", "name": "三国地图", "url": "https://map.xhja.cn/topics/sanguo.html" },
+        { "@type": "Article", "name": "西晋地图", "url": "https://map.xhja.cn/topics/xijin.html" },
+        { "@type": "Article", "name": "东晋十六国地图", "url": "https://map.xhja.cn/topics/dongjin.html" },
+        { "@type": "Article", "name": "南北朝地图", "url": "https://map.xhja.cn/topics/nanbei.html" },
+        { "@type": "Article", "name": "隋地图", "url": "https://map.xhja.cn/topics/sui.html" },
+        { "@type": "Article", "name": "唐地图", "url": "https://map.xhja.cn/topics/tang.html" },
+        { "@type": "Article", "name": "五代十国地图", "url": "https://map.xhja.cn/topics/wudai.html" },
+        { "@type": "Article", "name": "北宋地图", "url": "https://map.xhja.cn/topics/beisong.html" },
+        { "@type": "Article", "name": "南宋地图", "url": "https://map.xhja.cn/topics/nansong.html" },
+        { "@type": "Article", "name": "元地图", "url": "https://map.xhja.cn/topics/yuan.html" },
+        { "@type": "Article", "name": "明地图", "url": "https://map.xhja.cn/topics/ming.html" },
+        { "@type": "Article", "name": "清地图", "url": "https://map.xhja.cn/topics/qing.html" },
+        { "@type": "Article", "name": "中华民国地图", "url": "https://map.xhja.cn/topics/roc.html" },
+        { "@type": "Article", "name": "中华人民共和国地图", "url": "https://map.xhja.cn/topics/prc.html" }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "江山时序", "item": "https://map.xhja.cn/" },
+        { "@type": "ListItem", "position": 2, "name": "专题图志总览", "item": "https://map.xhja.cn/topics/index.html" },
+        { "@type": "ListItem", "position": 3, "name": "王朝地图", "item": "https://map.xhja.cn/topics/dynasty-maps.html" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site">
+  <div class="inner">
+    <a href="../" style="text-decoration:none;color:inherit;display:flex;gap:10px;align-items:center;">
+      <span class="seal">江山时序</span><strong>中国历史地图 · 战国 → 今</strong>
+    </a>
+    <nav>
+      <a href="../">进入交互式地图</a>
+      <a href="./">专题图志总目录</a>
+      <a href="https://github.com/xhjxhjcn/jiangshan-map" target="_blank" rel="noopener noreferrer">GitHub 开源仓库</a>
+    </nav>
+  </div>
+</header>
+<div class="wrap">
+  <span class="kicker">历代王朝 · 疆域总览</span>
+  <h1>王朝地图 · 中国历代王朝疆域地图总览</h1>
+  <p class="en-sub">Dynasty Maps of China — Territory and Administrative Geography from the Warring States (403 BCE) to the Present</p>
+
+  <div class="lede">
+    中国自秦统一以来，两千余年间王朝更迭不断，版图与政区屡有伸缩分合。本页把「江山时序」收录的
+    <strong>18 个王朝（朝代）</strong>按时间顺序汇总成一册王朝地图总览：每一朝都可进入对应的
+    王朝疆域地图，查看该朝的多阶段版图快照、都城所在、州郡（行省）政区层级，以及城池的古今地名对照。
+    点击任一王朝即可打开地图，并用底部时间轴在王朝之间连续拖动。
+  </div>
+
+  <h2>一、王朝地图一览（按时间顺序）</h2>
+  <table>
+    <thead><tr><th>王朝 / 时期</th><th>起止</th><th>都城</th><th>收录城池</th><th>编年大事</th></tr></thead>
+    <tbody>
+<tr>
+      <td><a href="zhanguo.html" title="战国历史地图">战国</a></td>
+      <td>前403—前221</td>
+      <td>咸阳（秦）· 洛阳（周）· 七雄都城</td>
+      <td>41 座</td>
+      <td>34 项</td>
+    </tr>
+<tr>
+      <td><a href="qin.html" title="秦历史地图">秦</a></td>
+      <td>前221—前202</td>
+      <td>咸阳</td>
+      <td>40 座</td>
+      <td>11 项</td>
+    </tr>
+<tr>
+      <td><a href="xihan.html" title="西汉历史地图">西汉</a></td>
+      <td>前202—25</td>
+      <td>长安</td>
+      <td>62 座</td>
+      <td>35 项</td>
+    </tr>
+<tr>
+      <td><a href="donghan.html" title="东汉历史地图">东汉</a></td>
+      <td>25—220</td>
+      <td>洛阳</td>
+      <td>48 座</td>
+      <td>35 项</td>
+    </tr>
+<tr>
+      <td><a href="sanguo.html" title="三国历史地图">三国</a></td>
+      <td>220—280</td>
+      <td>洛阳 / 成都 / 建业</td>
+      <td>41 座</td>
+      <td>20 项</td>
+    </tr>
+<tr>
+      <td><a href="xijin.html" title="西晋历史地图">西晋</a></td>
+      <td>280—316</td>
+      <td>洛阳</td>
+      <td>39 座</td>
+      <td>12 项</td>
+    </tr>
+<tr>
+      <td><a href="dongjin.html" title="东晋十六国历史地图">东晋十六国</a></td>
+      <td>317—420</td>
+      <td>建康（东晋）</td>
+      <td>47 座</td>
+      <td>34 项</td>
+    </tr>
+<tr>
+      <td><a href="nanbei.html" title="南北朝历史地图">南北朝</a></td>
+      <td>420—581</td>
+      <td>平城→洛阳（北朝）/ 建康（南朝）</td>
+      <td>50 座</td>
+      <td>35 项</td>
+    </tr>
+<tr>
+      <td><a href="sui.html" title="隋历史地图">隋</a></td>
+      <td>581—618</td>
+      <td>大兴（长安）</td>
+      <td>46 座</td>
+      <td>12 项</td>
+    </tr>
+<tr>
+      <td><a href="tang.html" title="唐历史地图">唐</a></td>
+      <td>618—907</td>
+      <td>长安</td>
+      <td>108 座</td>
+      <td>60 项</td>
+    </tr>
+<tr>
+      <td><a href="wudai.html" title="五代十国历史地图">五代十国</a></td>
+      <td>907—960</td>
+      <td>开封</td>
+      <td>51 座</td>
+      <td>23 项</td>
+    </tr>
+<tr>
+      <td><a href="beisong.html" title="北宋历史地图">北宋</a></td>
+      <td>960—1127</td>
+      <td>东京开封府</td>
+      <td>89 座</td>
+      <td>35 项</td>
+    </tr>
+<tr>
+      <td><a href="nansong.html" title="南宋历史地图">南宋</a></td>
+      <td>1127—1279</td>
+      <td>临安</td>
+      <td>72 座</td>
+      <td>30 项</td>
+    </tr>
+<tr>
+      <td><a href="yuan.html" title="元历史地图">元</a></td>
+      <td>1279—1368</td>
+      <td>大都</td>
+      <td>63 座</td>
+      <td>22 项</td>
+    </tr>
+<tr>
+      <td><a href="ming.html" title="明历史地图">明</a></td>
+      <td>1368—1644</td>
+      <td>顺天府（北京）</td>
+      <td>121 座</td>
+      <td>44 项</td>
+    </tr>
+<tr>
+      <td><a href="qing.html" title="清历史地图">清</a></td>
+      <td>1644—1912</td>
+      <td>京师（北京）</td>
+      <td>140 座</td>
+      <td>53 项</td>
+    </tr>
+<tr>
+      <td><a href="roc.html" title="中华民国历史地图">中华民国</a></td>
+      <td>1912—1949</td>
+      <td>北京→南京</td>
+      <td>348 座</td>
+      <td>19 项</td>
+    </tr>
+<tr>
+      <td><a href="prc.html" title="中华人民共和国历史地图">中华人民共和国</a></td>
+      <td>1949—今</td>
+      <td>北京</td>
+      <td>357 座</td>
+      <td>12 项</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <h2>二、按王朝进入地图</h2>
+  <div class="grid">
+<a class="card" href="zhanguo.html">
+      <b>战国地图 · 前403—前221</b>
+      <span>都城 咸阳（秦）· 洛阳（周）· 七雄都城 · 41 座城池古今地名对照</span>
+    </a>
+<a class="card" href="qin.html">
+      <b>秦地图 · 前221—前202</b>
+      <span>都城 咸阳 · 40 座城池古今地名对照</span>
+    </a>
+<a class="card" href="xihan.html">
+      <b>西汉地图 · 前202—25</b>
+      <span>都城 长安 · 62 座城池古今地名对照</span>
+    </a>
+<a class="card" href="donghan.html">
+      <b>东汉地图 · 25—220</b>
+      <span>都城 洛阳 · 48 座城池古今地名对照</span>
+    </a>
+<a class="card" href="sanguo.html">
+      <b>三国地图 · 220—280</b>
+      <span>都城 洛阳 / 成都 / 建业 · 41 座城池古今地名对照</span>
+    </a>
+<a class="card" href="xijin.html">
+      <b>西晋地图 · 280—316</b>
+      <span>都城 洛阳 · 39 座城池古今地名对照</span>
+    </a>
+<a class="card" href="dongjin.html">
+      <b>东晋十六国地图 · 317—420</b>
+      <span>都城 建康（东晋） · 47 座城池古今地名对照</span>
+    </a>
+<a class="card" href="nanbei.html">
+      <b>南北朝地图 · 420—581</b>
+      <span>都城 平城→洛阳（北朝）/ 建康（南朝） · 50 座城池古今地名对照</span>
+    </a>
+<a class="card" href="sui.html">
+      <b>隋地图 · 581—618</b>
+      <span>都城 大兴（长安） · 46 座城池古今地名对照</span>
+    </a>
+<a class="card" href="tang.html">
+      <b>唐地图 · 618—907</b>
+      <span>都城 长安 · 108 座城池古今地名对照</span>
+    </a>
+<a class="card" href="wudai.html">
+      <b>五代十国地图 · 907—960</b>
+      <span>都城 开封 · 51 座城池古今地名对照</span>
+    </a>
+<a class="card" href="beisong.html">
+      <b>北宋地图 · 960—1127</b>
+      <span>都城 东京开封府 · 89 座城池古今地名对照</span>
+    </a>
+<a class="card" href="nansong.html">
+      <b>南宋地图 · 1127—1279</b>
+      <span>都城 临安 · 72 座城池古今地名对照</span>
+    </a>
+<a class="card" href="yuan.html">
+      <b>元地图 · 1279—1368</b>
+      <span>都城 大都 · 63 座城池古今地名对照</span>
+    </a>
+<a class="card" href="ming.html">
+      <b>明地图 · 1368—1644</b>
+      <span>都城 顺天府（北京） · 121 座城池古今地名对照</span>
+    </a>
+<a class="card" href="qing.html">
+      <b>清地图 · 1644—1912</b>
+      <span>都城 京师（北京） · 140 座城池古今地名对照</span>
+    </a>
+<a class="card" href="roc.html">
+      <b>中华民国地图 · 1912—1949</b>
+      <span>都城 北京→南京 · 348 座城池古今地名对照</span>
+    </a>
+<a class="card" href="prc.html">
+      <b>中华人民共和国地图 · 1949—今</b>
+      <span>都城 北京 · 357 座城池古今地名对照</span>
+    </a>
+  </div>
+
+  <h2>三、十八个王朝的疆域脉络</h2>
+  <p>以下每一段都取自本站的王朝史料摘要，可作为对照王朝地图时的速览：</p>
+<h3>战国（前403—前221）· 王朝地图</h3>
+    <p>公元前403年周威烈王册命韩、赵、魏为诸侯（《资治通鉴》开篇），前386年田氏代齐，战国七雄（秦、楚、齐、燕、赵、魏、韩）并立争雄。各国推行变法、修筑长城、兴修水利，百家争鸣；秦经商鞅变法与并巴蜀后崛起，秦王嬴政自前230年至前221年十年间次第攻灭韩、赵、魏、楚、燕、齐，终结列国纷争。本站为该朝保存了 15 段版图阶段快照，可拖动时间轴连续查看疆域变化。</p>
+    <p>都城：咸阳（秦）· 洛阳（周）· 七雄都城　·　收录城池 41 座　·　编年大事 34 项　→　<a href="zhanguo.html" title="战国历史地图">查看战国王朝地图</a></p>
+<h3>秦（前221—前202）· 王朝地图</h3>
+    <p>秦灭六国，首次建立大一统的中央集权帝国，分天下为三十六郡（后增至四十余郡），推行书同文、车同轨、统一度量衡。蒙恬北逐匈奴收河套、筑长城与秦直道；南开灵渠平百越，置南海、桂林、象郡。前209年陈胜吴广起义，秦亡后楚汉相争。本站为该朝保存了 6 段版图阶段快照，可拖动时间轴连续查看疆域变化。</p>
+    <p>都城：咸阳　·　收录城池 40 座　·　编年大事 11 项　→　<a href="qin.html" title="秦历史地图">查看秦王朝地图</a></p>
+<h3>西汉（前202—25）· 王朝地图</h3>
+    <p>汉初郡国并行、与匈奴和亲；武帝北击匈奴，开河西走廊与丝绸之路，南平南越，东置朝鲜四郡，宣帝时设西域都护府。8 年王莽代汉建新，23 年新亡。本站为该朝保存了 10 段版图阶段快照，可拖动时间轴连续查看疆域变化。</p>
+    <p>都城：长安　·　收录城池 62 座　·　编年大事 35 项　→　<a href="xihan.html" title="西汉历史地图">查看西汉王朝地图</a></p>
+<h3>东汉（25—220）· 王朝地图</h3>
+    <p>光武中兴后定都洛阳。班超经营西域，窦宪勒石燕然，北匈奴西迁；蔡伦改进造纸术。中后期外戚宦官交替专权，党锢之祸后黄巾起义，董卓入京，群雄割据。本站为该朝保存了 16 段版图阶段快照，可拖动时间轴连续查看疆域变化。</p>
+    <p>都城：洛阳　·　收录城池 48 座　·　编年大事 35 项　→　<a href="donghan.html" title="东汉历史地图">查看东汉王朝地图</a></p>
+<h3>三国（220—280）· 王朝地图</h3>
+    <p>赤壁之战后形成魏、蜀、吴三足鼎立：曹魏据中原与西北并置西域长史，蜀汉据巴蜀与南中、诸葛亮数度北伐，孙吴据江东、荆南与交广。263 年魏灭蜀，265 年司马炎代魏建晋，280 年西晋灭吴。本站为该朝保存了 4 段版图阶段快照，可拖动时间轴连续查看疆域变化。</p>
+    <p>都城：洛阳 / 成都 / 建业　·　收录城池 41 座　·　编年大事 20 项　→　<a href="sanguo.html" title="三国历史地图">查看三国王朝地图</a></p>
+<h3>西晋（280—316）· 王朝地图</h3>
+    <p>司马炎代魏建晋，280 年灭吴重归一统。分封宗室引发八王之乱，并州匈奴汉赵与巴蜀成汉先后割据；311 年永嘉之乱洛阳陷落，316 年长安失守西晋亡。本站为该朝保存了 4 段版图阶段快照，可拖动时间轴连续查看疆域变化。</p>
+    <p>都城：洛阳　·　收录城池 39 座　·　编年大事 12 项　→　<a href="xijin.html" title="西晋历史地图">查看西晋王朝地图</a></p>
+<h3>东晋十六国（317—420）· 王朝地图</h3>
+    <p>衣冠南渡，司马睿在建康重建晋室；北方汉赵于 319 年分裂为刘曜前赵与石勒后赵，与河西张氏前凉、代北拓跋代国、辽东慕容前燕、巴蜀成汉并立。329 年石勒灭前赵统一北方大部；后赵崩溃后形成前秦与前燕东西对峙；376 年前秦苻坚统一北方，383 年淝水之战败于谢玄北府兵后北方再分裂，鲜卑拓跋珪复国建北魏崛起。本站为该朝保存了 21 段版图阶段快照，可拖动时间轴连续查看疆域变化。</p>
+    <p>都城：建康（东晋）　·　收录城池 47 座　·　编年大事 34 项　→　<a href="dongjin.html" title="东晋十六国历史地图">查看东晋十六国王朝地图</a></p>
+<h3>南北朝（420—581）· 王朝地图</h3>
+    <p>420 年刘裕代晋建宋，南朝历宋、齐、梁、陈；北方北魏太武帝拓跋焘先后灭胡夏（431）、北燕（436）、北凉（439），于 439 年正式统一北方，结束五胡十六国。534 年北魏分裂为东魏、西魏，又分别为北齐、北周所代。本站为该朝保存了 15 段版图阶段快照，可拖动时间轴连续查看疆域变化。</p>
+    <p>都城：平城→洛阳（北朝）/ 建康（南朝）　·　收录城池 50 座　·　编年大事 35 项　→　<a href="nanbei.html" title="南北朝历史地图">查看南北朝王朝地图</a></p>
+<h3>隋（581—618）· 王朝地图</h3>
+    <p>581 年杨坚代周建隋，589 年灭陈结束近三百年南北分裂。废郡存州（后改州为郡），创立三省六部与科举制，营建东都洛阳，开凿贯通南北的大运河，西破吐谷浑置河源、西海等郡；隋末三征高句丽引发群雄并起。本站为该朝保存了 5 段版图阶段快照，可拖动时间轴连续查看疆域变化。</p>
+    <p>都城：大兴（长安）　·　收录城池 46 座　·　编年大事 12 项　→　<a href="sui.html" title="隋历史地图">查看隋王朝地图</a></p>
+<h3>唐（618—907）· 王朝地图</h3>
+    <p>盛唐设安西、北庭、安北、安东、安南等都护府，长安是当时世界最大的都市；690—705 年武则天改唐为周（武周），定都神都洛阳。755 年安史之乱后，河西、陇右与西域先后陷于吐蕃，藩镇割据，直至 907 年朱温代唐。本站为该朝保存了 29 段版图阶段快照，可拖动时间轴连续查看疆域变化。</p>
+    <p>都城：长安　·　收录城池 108 座　·　编年大事 60 项　→　<a href="tang.html" title="唐历史地图">查看唐王朝地图</a></p>
+<h3>五代十国（907—960）· 王朝地图</h3>
+    <p>907 年朱温代唐，中原五十余年间后梁、后唐、后晋、后汉、后周五代更迭，南方及河东先后出现前蜀、后蜀、吴、南唐、吴越、闽、楚、南汉、荆南、北汉十国。936 年石敬瑭割燕云十六州予契丹，939 年安南脱离，为此后数百年边疆格局埋下伏笔。本站为该朝保存了 12 段版图阶段快照，可拖动时间轴连续查看疆域变化。</p>
+    <p>都城：开封　·　收录城池 51 座　·　编年大事 23 项　→　<a href="wudai.html" title="五代十国历史地图">查看五代十国王朝地图</a></p>
+<h3>北宋（960—1127）· 王朝地图</h3>
+    <p>陈桥兵变后用近二十年平定荆湖、后蜀、南汉、南唐、吴越、北汉，结束五代十国；两次北伐失利，燕云十六州终为辽有，与辽、西夏、大理长期并立。经济文化高度繁荣。本站为该朝保存了 12 段版图阶段快照，可拖动时间轴连续查看疆域变化。</p>
+    <p>都城：东京开封府　·　收录城池 89 座　·　编年大事 35 项　→　<a href="beisong.html" title="北宋历史地图">查看北宋王朝地图</a></p>
+<h3>南宋（1127—1279）· 王朝地图</h3>
+    <p>宋室南渡，以临安为行在，与金以淮河—大散关为界。北方蒙古崛起，1234 年宋蒙联军灭金后，蒙古连灭大理、吐蕃归附，南宋独支四十余年，终于崖山。本站为该朝保存了 8 段版图阶段快照，可拖动时间轴连续查看疆域变化。</p>
+    <p>都城：临安　·　收录城池 72 座　·　编年大事 30 项　→　<a href="nansong.html" title="南宋历史地图">查看南宋王朝地图</a></p>
+<h3>元（1279—1368）· 王朝地图</h3>
+    <p>1271 年忽必烈定国号为大元，1279 年崖山灭南宋一统全国。首次将西藏（宣政院辖地）、云南、漠北、东北纳入同一中央政权，设中书省与十行省，置澎湖巡检司，大都成为欧亚陆海贸易与文化交流枢纽。本站为该朝保存了 6 段版图阶段快照，可拖动时间轴连续查看疆域变化。</p>
+    <p>都城：大都　·　收录城池 63 座　·　编年大事 22 项　→　<a href="yuan.html" title="元历史地图">查看元王朝地图</a></p>
+<h3>明（1368—1644）· 王朝地图</h3>
+    <p>洪武、永乐时设奴儿干都司、哈密卫、交趾布政司，郑和七下西洋；土木堡之变后收缩至长城、辽东，北御蒙古、东南抗倭；1616 年后金崛起，萨尔浒之战后辽东尽失。本站为该朝保存了 12 段版图阶段快照，可拖动时间轴连续查看疆域变化。</p>
+    <p>都城：顺天府（北京）　·　收录城池 121 座　·　编年大事 44 项　→　<a href="ming.html" title="明历史地图">查看明王朝地图</a></p>
+<h3>清（1644—1912）· 王朝地图</h3>
+    <p>1644 年入关后，历康熙、雍正、乾隆三朝逐步奠定版图：收台湾、定漠北、平青海、设驻藏大臣、平定天山南北。1840 年后屡遭列强侵略，外东北与伊犁西境割让。本站为该朝保存了 18 段版图阶段快照，可拖动时间轴连续查看疆域变化。</p>
+    <p>都城：京师（北京）　·　收录城池 140 座　·　编年大事 53 项　→　<a href="qing.html" title="清历史地图">查看清王朝地图</a></p>
+<h3>中华民国（1912—1949）· 王朝地图</h3>
+    <p>1912 年辛亥革命终结二千年帝制，共和肇始。历经北洋军阀割据、护法运动、国民革命军北伐、十年建设、十四年抗日战争与台湾光复，至 1946—1949 年解放战争。本站为该朝保存了 11 段版图阶段快照，可拖动时间轴连续查看疆域变化。</p>
+    <p>都城：北京→南京　·　收录城池 348 座　·　编年大事 19 项　→　<a href="roc.html" title="中华民国历史地图">查看中华民国王朝地图</a></p>
+<h3>中华人民共和国（1949—今）· 王朝地图</h3>
+    <p>1949 年成立。改革开放以来经济高速发展，香港、澳门回归，成为世界第二大经济体。</p>
+    <p>都城：北京　·　收录城池 357 座　·　编年大事 12 项　→　<a href="prc.html" title="中华人民共和国历史地图">查看中华人民共和国王朝地图</a></p>
+
+  <h2>四、历代王朝与地图上常见的几个问题</h2>
+
+  <h3>1. 「王朝地图」和「朝代地图」是同一回事吗？</h3>
+  <p>
+    是。中文里「王朝」与「朝代」在讲中国历史地图时基本通用：王朝指由某一姓家族建立的统治政权
+    （如刘氏汉朝、李氏唐朝），朝代是史学分期习惯的叫法。本站的王朝地图按
+    战国 → 秦 → 西汉 → 东汉 → 三国 → 西晋 → 东晋十六国 → 南北朝 → 隋 → 唐 → 五代十国 →
+    北宋 → 南宋 → 元 → 明 → 清 → 民国 → 中华人民共和国 共 18 段排列。
+  </p>
+
+  <h3>2. 为什么有的王朝地图分很多阶段？</h3>
+  <p>
+    一个大王朝的版图并非一成不变。以唐为例，初唐、盛唐、安史之乱后、晚唐的疆域差别极大：
+    安西与北庭都护府在盛唐时远及中亚，而 755 年之后河西、陇右与西域先后陷于吐蕃。
+    因此本站为同一王朝保存了多个版图快照（例如唐收录 29 幅），拖动时间轴时会按年份自动切换，
+    比只看一张「最大疆域图」更接近史实。
+  </p>
+
+  <h3>3. 王朝地图上的边界是精确国界吗？</h3>
+  <p>
+    不是。古代疆域多为羁縻、藩属与军事控制线，缺乏现代意义的精确国界。本站的疆域与政区为
+    <strong>示意性近似</strong>，用于呈现大势与沿革关系，不作为边界依据。
+  </p>
+
+  <h3>4. 古今地名怎么对照？</h3>
+  <p>
+    每个王朝页都附有城池的古今地名对照表（如唐代「江州」对应今江西九江）。也可以直接进入
+    <a href="../">交互式地图</a>，点击任意古城查看其「点地溯源」面板——同一地点在历代所属的
+    政权、政区与名称变迁会按时间列出来。
+  </p>
+
+  <h2>五、相关专题</h2>
+  <div class="grid">
+    <a class="card" href="person-footprints.html"><b>历史人物足迹地图</b><span>张骞、诸葛亮、玄奘、李白、苏轼、王阳明的行迹路线</span></a>
+    <a class="card" href="index.html"><b>专题图志总目录</b><span>34 篇静态历史地理专题</span></a>
+    <a class="card" href="../"><b>交互式历史地图</b><span>拖动时间轴，点地溯源，古今地名对照</span></a>
+  </div>
+
+  <footer class="site-foot">
+  <div>© 江山时序（Jiangshan Historical Atlas） · <a href="https://map.xhja.cn/">map.xhja.cn</a>
+       · 历史疆域与政区为示意性近似 · 数据整理持续更新中</div>
+  <div style="margin-top:6px">开源项目（GPL-3.0），原作者 <a href="https://deanchen.me/about/" target="_blank" rel="noopener noreferrer">Dean Chen（@DeanChensj）</a></div>
+</footer>
+</div>
+</body>
+</html>
