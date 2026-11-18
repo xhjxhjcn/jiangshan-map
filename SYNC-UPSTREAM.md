@@ -15,33 +15,60 @@
 唯一真正重叠的是 `index.html` 和 `js/app.js`。实测（2026-11-15，上游 3 个提交、18 个文件）
 `git merge` **零冲突**自动完成——因为上游改的是标签里的数据与版本串，我们改的是另几行。
 
-## 二、标准流程（4 步）
+## 二、标准流程
+
+> 2026-11-18 同步（18 提交 / 91 文件）后的**修正版流程**。
+> 大更新时上游会重生成 `topics/*.html`，直接 `git merge` 会产生几十个冲突，
+> 且上游没有我们的文件、合并后定制会被判定为「删除」。正确做法是下面这套。
 
 ```bash
 cd D:\DSH\xhja\map.xhja.cn
 
-# 1. 拉取上游
-git fetch upstream main
+# 0. 先备份（大更新必做）
+git tag "backup-before-sync-$(date +%Y%m%d-%H%M%S)"
 
-# 2. 看看上游改了什么（先看清楚再合）
+# 1. 拉取上游，先看清楚
+git fetch upstream main
 git log --oneline HEAD..upstream/main
 git diff --stat HEAD..upstream/main
 
-# 3. 合并
+# 2. 合并（有冲突是正常的）
 git merge upstream/main
-
-# 4. 重算缓存串（这一步不能省，见第三节）
-node scripts/sync_version.js
 ```
 
-然后**必须**跑这两条验证：
+**冲突处理原则：一律取上游版，再用脚本重打定制补丁。**
+
+```bash
+# topics/*.html 冲突：上游整体重生成，逐块手工解不现实
+for f in $(git diff --name-only --diff-filter=U | grep '^topics/'); do
+  git checkout --theirs -- "$f" && git add "$f"
+done
+
+# index.html / js/app.js / llms.txt 冲突：同样取上游
+for f in index.html js/app.js llms.txt; do
+  git checkout --theirs -- "$f" 2>/dev/null && git add "$f"
+done
+```
+
+然后**按顺序**重跑定制脚本（都是幂等的）：
+
+```bash
+node scripts/customize.js         # 域名替换、字体自托管、去上游统计
+node scripts/attribution.js       # 署名与星标文案
+node scripts/inject-stats.js      # 注入 xhja.cn 访客统计（site=map）
+node scripts/seo-patch.js         # 首页 title/keywords + 隐藏目录总览区块
+node scripts/build-landing-pages.js  # 重建两个 SEO 落地页
+node scripts/sync_version.js      # 重算缓存串（不能省，见第三节）
+```
+
+验证（两个都必须过）：
 
 ```bash
 node scripts/verify-localization.js          # 25 项定制检查，必须 25/25
 node scripts/validate_atlas.js --suite=core,trace,cartography,ui
 ```
 
-两者都通过后再提交推送：
+通过后提交推送：
 
 ```bash
 git add -A
@@ -52,10 +79,21 @@ git push origin main
 ESA 会自动构建（约 50 秒）。**偶尔 webhook 会丢**，若 2 分钟没动静就手动触发：
 
 ```bash
-python D:\DSH\xhja\_esa\mkroutine.py status          # 看构建列表
-# 手动触发：
 python -c "exec(open(r'D:\DSH\xhja\_esa\aliyun.py').read().split('if __name__')[0]); print(call('CreateRoutineBuild', endpoint='esa.cn-hangzhou.aliyuncs.com', method='POST', RoutineName='map-xhja-cn', Branch='main'))"
 ```
+
+## 二·五、这套脚本是怎么来的（别删）
+
+| 脚本 | 为什么必须有 |
+| --- | --- |
+| `customize.js` | 域名替换 8600+ 处、字体自托管、去 Google Fonts/vercount/beacon/atlas_track |
+| `attribution.js` | 星标按钮指向本仓库、「更多」菜单标注原作者 |
+| `inject-stats.js` | 访客统计是上游没有的，取上游版 index.html 后必丢 |
+| `seo-patch.js` | 首页 title/keywords 与隐藏目录总览区块，同上 |
+| `build-landing-pages.js` | 王朝地图 / 历史人物足迹两个落地页，上游没有 |
+
+⚠ **新增任何「上游没有的改动」时，必须同时写成幂等脚本放进这个清单**，
+否则下次同步一定丢。2026-11-18 就因为 SEO 改动是手工做的，同步后丢了 6 项。
 
 ## 三、最容易踩的坑：缓存串不会自动更新
 
