@@ -21,8 +21,18 @@ const KEEP = [
   'https://stats.deanchen.me/e',
 ];
 
+// ⚠ 这里的 SKIP 很重要：customize.js 会把「上游地址」全局替换成「本站地址」，
+//   而 verify-localization.js 等脚本里**需要保留**上游地址作为对照字符串。
+//   若被替换，检测会永久误报（2026-11-18 踩过：两项检查自相矛盾）。
+//   凡是以「上游地址」为判断依据的脚本都必须列入 SKIP。
 const TEXT_EXT = new Set(['.html', '.js', '.json', '.xml', '.txt', '.md', '.css', '.webmanifest', '.yml', '.jsonc']);
-const SKIP = new Set(['scripts/customize.js']);
+const SKIP = new Set([
+  'scripts/customize.js', // 自己
+  'scripts/verify-localization.js', // 需要上游地址做对照
+  'scripts/seo-patch.js', // 同上
+  'scripts/indexnow.js', // 不涉及域名替换
+  'scripts/inject-stats.js',
+]);
 
 function walk(dir, out = []) {
   for (const name of fs.readdirSync(dir)) {

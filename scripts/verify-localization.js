@@ -14,7 +14,7 @@ const sitemap = read('sitemap.xml');
 const checks = [
   ['index.html canonical 指向本站', /<link rel="canonical" id="lnk-canonical" href="https:\/\/map\.xhja\.cn\/" \/>/.test(indexHtml)],
   ['index.html og:url 指向本站', /<meta property="og:url" id="og-url" content="https:\/\/map\.xhja\.cn\/" \/>/.test(indexHtml)],
-  ['index.html 无上游站点域（正文外链除外）', !indexHtml.includes('href="https://deanchen.me/jiangshan-map/topics/')],
+  ['index.html 无上游 topics 站内链接', !/href="https:\/\/deanchen\.me\/jiangshan-map\/topics\//.test(indexHtml)],
   ['index.html 自托管字体 css/fonts.css', /href="css\/fonts\.css\?v=[0-9a-f]+"/.test(indexHtml)],
   ['index.html 无 Google Fonts', !indexHtml.includes('fonts.googleapis.com')],
   ['index.html 无 vercount', !indexHtml.includes('vercount')],
@@ -28,7 +28,7 @@ const checks = [
   ['index.html 隐藏目录含人物足迹落地页', indexHtml.includes('topics/person-footprints.html')],
   ['app.js 星标文案指向本仓库', appJs.includes('Star xhjxhjcn/jiangshan-map')],
   ['app.js 署名含原作者', appJs.includes('原作者 DeanChensj')],
-  ['app.js 无上游域名 baseSiteUrl', !appJs.includes("'https://deanchen.me/jiangshan-map/'")],
+  ['app.js baseSiteUrl 指向本站', /baseSiteUrl = 'https:\/\/map\.xhja\.cn\/'/.test(appJs)],
   ['robots.txt Sitemap 指本站', robots.includes('Sitemap: https://map.xhja.cn/sitemap.xml')],
   ['sitemap.xml 全部指向本站', !sitemap.includes('https://deanchen.me/')],
   ['sitemap.xml 含王朝地图页', sitemap.includes('/topics/dynasty-maps.html')],

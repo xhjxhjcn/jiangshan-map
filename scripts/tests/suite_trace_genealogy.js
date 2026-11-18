@@ -500,12 +500,71 @@ async function runTraceGenealogySuite(ctx) {
     mockSeoNav.dataset.locale === 'en' &&
       mockSeoNav.innerHTML.includes('Warring States Historical Map') &&
       mockSeoNav.innerHTML.includes("People's Republic of China Historical Map") &&
-      !/[\u4e00-\u9fff]/.test(mockSeoNav.innerHTML),
-    'In English mode, _syncSeoDirectoryLocale() must translate all 18 dynasty entries with zero remaining CJK characters'
+      !/[\u4e00-\u9fff]/.test(mockSeoNav.innerHTML) &&
+      !mockSeoNav.innerHTML.includes('undefined'),
+    'In English mode, _syncSeoDirectoryLocale() must translate all 18 dynasty entries with zero remaining CJK characters or undefined strings'
   );
   ctrl.locale = 'zh';
   ctrl._syncSeoDirectoryLocale();
   assert.strictEqual(mockSeoNav.innerHTML, '<h2>江山时序</h2>', '_syncSeoDirectoryLocale() must restore Chinese HTML when switching back to zh');
+
+  // Cold-boot regression (#410): _syncSeoDirectoryLocale before lore_detail.js loads must not emit "undefined",
+  // and _ensureLoreDetail() must automatically re-hydrate all 20 pass descriptions once loaded.
+  {
+    const passes = ctrl.constructor.STRATEGIC_PASSES;
+    const savedSentinel = sandbox.window.ATLAS_LORE_DETAIL_LOADED;
+    const savedLandmarks = sandbox.window.ATLAS_LORE_DATA.PLACE_LANDMARK_EVENTS;
+    const savedLoaded = ctrl._loreDetailLoaded;
+    const savedPromise = ctrl._loreDetailPromise;
+    const savedLoadOnce = ctrl._loadScriptOnce;
+    const savedChokes = passes.map((p) => p.chokepointEn);
+    try {
+      sandbox.window.ATLAS_LORE_DETAIL_LOADED = false;
+      delete sandbox.window.ATLAS_LORE_DATA.PLACE_LANDMARK_EVENTS;
+      ctrl._loreDetailLoaded = false;
+      ctrl._loreDetailPromise = null;
+      passes.forEach((p) => {
+        delete p.chokepointEn;
+      });
+      ctrl.locale = 'en';
+      ctrl._syncSeoDirectoryLocale();
+      assert(
+        mockSeoNav.dataset.locale === 'en' &&
+          mockSeoNav.dataset.enDetail === '0' &&
+          !mockSeoNav.innerHTML.includes('undefined'),
+        'Before lore_detail.js loads, English SEO directory must render without literal "undefined" and mark enDetail=0'
+      );
+      ctrl._loadScriptOnce = () => ({
+        then(cb) {
+          sandbox.window.ATLAS_LORE_DATA.PLACE_LANDMARK_EVENTS = savedLandmarks;
+          passes.forEach((p, idx) => {
+            p.chokepointEn = savedChokes[idx];
+          });
+          sandbox.window.ATLAS_LORE_DETAIL_LOADED = true;
+          return Promise.resolve(cb());
+        },
+      });
+      ctrl._ensureLoreDetail();
+      assert(
+        mockSeoNav.dataset.enDetail === '1' &&
+          !mockSeoNav.innerHTML.includes('undefined') &&
+          mockSeoNav.innerHTML.includes(savedChokes[0]) &&
+          mockSeoNav.innerHTML.includes(savedChokes[savedChokes.length - 1]),
+        'Resolving _ensureLoreDetail() in English mode must re-sync #seo-atlas-directory with all 20 chokepointEn descriptions'
+      );
+    } finally {
+      passes.forEach((p, idx) => {
+        p.chokepointEn = savedChokes[idx];
+      });
+      sandbox.window.ATLAS_LORE_DETAIL_LOADED = savedSentinel;
+      sandbox.window.ATLAS_LORE_DATA.PLACE_LANDMARK_EVENTS = savedLandmarks;
+      ctrl._loreDetailLoaded = savedLoaded;
+      ctrl._loreDetailPromise = savedPromise;
+      ctrl._loadScriptOnce = savedLoadOnce;
+      ctrl.locale = 'zh';
+      ctrl._syncSeoDirectoryLocale();
+    }
+  }
   ctrl._clearQuickSearchInput();
   assert.strictEqual(mockSearchInp.value, '', '_clearQuickSearchInput() must clear #inp-map-search value');
   ctrl._id = origId23e;
@@ -1754,6 +1813,23 @@ async function runTraceGenealogySuite(ctx) {
           `Expected clean English text & site mentioning "${enName}" on ${pKey}:${st.year}, got "${st.siteEn} -> ${st.textEn}"`
         );
       }
+    }
+
+    // 36. Historical homonym guard: Northern/Southern Song 南京应天府 (Shangqiu) must not match Jiangsu Nanjing
+    for (const dynKey of ['beisong', 'nansong']) {
+      const d = dynasties.find((item) => item.key === dynKey);
+      const njNear = ctrl._findNearestSettlement(d.settlements, 118.801, 32.061, 32);
+      const njEvs = ctrl._collectPlaceEventsForDynasty(d, 118.801, 32.061, njNear);
+      assert(
+        !njEvs.some((e) => (e.milestone && e.milestone.site || '').includes('南京应天府')),
+        `Jiangsu Nanjing (${dynKey}) must not include Shangqiu 南京应天府 events, got ${JSON.stringify(njEvs.map((e) => e.text))}`
+      );
+      const sqNear = ctrl._findNearestSettlement(d.settlements, 115.651, 34.411, 32);
+      const sqEvs = ctrl._collectPlaceEventsForDynasty(d, 115.651, 34.411, sqNear);
+      assert(
+        sqEvs.some((e) => (e.milestone && e.milestone.site || '').includes('南京应天府')),
+        `Shangqiu (${dynKey}) must retain its 南京应天府 event`
+      );
     }
   }
 

@@ -33,7 +33,7 @@
 
 ### 1. 站点地址
 `canonical` / `hreflang` / `og:url` / `twitter:*` / `sitemap.xml` / 站内绝对链接
-共 **9105 处、47 个文件** 从 `https://deanchen.me/jiangshan-map/` 换成 `https://map.xhja.cn/`。
+共 **9105 处、47 个文件** 从 `https://map.xhja.cn/` 换成 `https://map.xhja.cn/`。
 
 **刻意保留的原样外链**（改成本站会变 404，而且属于对原作者的署名）：
 - 作者博客 `https://deanchen.me/about/`
