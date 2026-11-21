@@ -1,8 +1,7 @@
 {
   "boot": [
     "neighbors",
-    "s_zhanguo_a",
-    "s_qin_a"
+    "s_zhanguo_a"
   ],
   "order": [
     "neighbors",
@@ -139,6 +138,7 @@
     "s_donghan_f",
     "s_sui_d",
     "s_tang_0",
+    "s_tang_0b",
     "s_yuan_c",
     "s_ming_0a",
     "s_ming_0b",
@@ -210,6 +210,9 @@
     "s_tang_840",
     "s_yuan_1335",
     "s_yuan_1367",
-    "s_wudai_955"
+    "s_wudai_955",
+    "s_roc_1938",
+    "s_nansong_e0",
+    "s_nansong_f"
   ]
 }

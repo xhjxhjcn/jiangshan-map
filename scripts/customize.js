@@ -81,28 +81,57 @@ const idxPath = path.join(ROOT, 'index.html');
 let html = fs.readFileSync(idxPath, 'utf8');
 const beforeHtml = html;
 
-// 字体：整块换掉（原来的注释块 + 3 条 link）
-const fontBlockRe =
-  /  <!-- Webfonts must not block rendering[\s\S]*?<link href="https:\/\/fonts\.googleapis\.com\/css2\?family=Ma\+Shan\+Zheng[^>]*>\n/;
-if (fontBlockRe.test(html)) {
-  html = html.replace(
-    fontBlockRe,
-    '  <!-- 字体自托管：Ma Shan Zheng 只保留站内用到的字形子集（17.6 KB）；\n' +
-      '       Noto Serif SC / Noto Sans SC 的全量中文分片有几百个文件，会撑爆静态站文件上限，\n' +
-      '       因此不下载，交给 css/style.css 里的系统字体栈（宋体 / 雅黑 / PingFang）兜底。 -->\n' +
-      '  <link rel="preload" href="assets/fonts/ma-shan-zheng.woff2" as="font" type="font/woff2" crossorigin />\n' +
-      '  <link rel="stylesheet" href="css/fonts.css?v=1" />\n'
-  );
-  console.log('字体：已改为自托管');
-} else {
-  console.log('字体：未匹配（可能已改过）');
-}
+// 字体：整块换掉。上游有两代写法，都要认得：
+//   旧版：<link href="https://fonts.googleapis.com/css2?..." ...>
+//   新版(#490)：<link data-font-href="https://fonts.googleapis.com/css2?..." ...>
+// 新版只是「延迟激活」Google Fonts，境内依然下载不到，所以照样换成自托管。
+const LOCAL_FONT_BLOCK =
+  '  <!-- 字体自托管：Ma Shan Zheng 只保留站内用到的字形子集（17.6 KB）；\n' +
+  '       Noto Serif SC / Noto Sans SC 的全量中文分片有几百个文件，会撑爆静态站文件上限，\n' +
+  '       因此不下载，交给 css/style.css 里的系统字体栈（宋体 / 雅黑 / PingFang）兜底。 -->\n' +
+  '  <link rel="preload" href="assets/fonts/ma-shan-zheng.woff2" as="font" type="font/woff2" crossorigin />\n' +
+  '  <link rel="stylesheet" href="css/fonts.css?v=1" />\n';
 
-// 上游统计
-const analyticsRe =
-  /  <!-- Analytics:[\s\S]*?<script defer src="https:\/\/events\.vercount\.one\/js"><\/script>\n  <script defer src="js\/atlas_track\.js[^"]*"><\/script>\n  <script defer src="https:\/\/static\.cloudflareinsights\.com[^>]*><\/script>\n/;
-if (analyticsRe.test(html)) {
-  html = html.replace(analyticsRe, '');
+let fontReplaced = false;
+// 最稳：逐行删掉任何引用 Google Fonts 的 <link>（href= 或 data-font-href= 都算），
+// 以及紧邻的「Webfonts must not block...」注释块。上游可能把 link 拆散、中间插注释，
+// 用大正则整块匹配容易漏（2026-11-21 就漏了一条 Ma Shan Zheng）。
+const lines = html.split('\n');
+const kept = [];
+for (const line of lines) {
+  if (/^\s*<!--\s*Webfonts must not block/.test(line)) continue;
+  if (/fonts\.googleapis\.com|fonts\.gstatic\.com/.test(line)) continue;
+  kept.push(line);
+}
+html = kept.join('\n');
+
+// 在 css/style.css 那条 link 之前插入自托管块（若还没有）
+if (!html.includes('css/fonts.css')) {
+  const cssLink = html.match(/^\s*<link rel="stylesheet" href="css\/style\.css[^>]*>\s*$/m);
+  if (cssLink) {
+    html = html.replace(cssLink[0], LOCAL_FONT_BLOCK + cssLink[0]);
+    fontReplaced = true;
+  }
+}
+console.log(fontReplaced ? '字体：已改为自托管' : '字体：已是自托管或未匹配');
+
+// 统计：上游 #490 也改了格式（beacon 变成 data- 属性延迟加载），
+// 且 #490 之后 atlas_track.js 单独一行、vercount / cloudflare 不再固定成三连。
+// 目标不变：这三个上游统计一个都不要。
+const beforeAnalytics = html;
+// 删掉所有指向统计的 <script>（无论 href 还是 data-href，无论 vercount / atlas_track / cloudflare）
+html = html
+  .split('\n')
+  .filter((line) => {
+    if (/atlas_track\.js/.test(line)) return false;
+    if (/events\.vercount\.one/.test(line)) return false;
+    if (/cloudflareinsights\.com/.test(line)) return false;
+    return true;
+  })
+  .join('\n');
+// 清掉可能残留的「Analytics:」注释行
+html = html.replace(/^\s*<!-- Analytics:[^\n]*-->\n/gm, '');
+if (html !== beforeAnalytics) {
   console.log('统计：已移除 vercount / atlas_track / Cloudflare beacon');
 } else {
   console.log('统计：未匹配（可能已改过）');

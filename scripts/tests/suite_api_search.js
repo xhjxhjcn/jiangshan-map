@@ -875,6 +875,32 @@ async function runApiSearchSuite(ctx) {
     );
   }
 
+  // CONTRIBUTING must document the commands and data symbols that actually ship, so a
+  // contributor following the storyline checklist edits a file that exists and names a
+  // table that is really loaded. `scripts/gen_pinyin.js` never existed and `PERSON_EVENTS`
+  // was renamed to `PERSON_DETAILS` in #312, but both stayed in the checklist (added in #358).
+  for (const [label, docSrc] of [
+    ['CONTRIBUTING.md', contributingSrc],
+    ['CONTRIBUTING_ZH.md', contributingZhSrc],
+  ]) {
+    for (const [, scriptPath] of docSrc.matchAll(/node\s+(scripts\/[A-Za-z0-9_\-.]+\.(?:js|cjs))/g)) {
+      assert(
+        fs.existsSync(path.join(ROOT, scriptPath)),
+        `${label} documents "node ${scriptPath}", but that file does not exist`
+      );
+    }
+    assert(
+      !docSrc.includes('PERSON_EVENTS'),
+      `${label} must not tell contributors to edit PERSON_EVENTS; the story-line stops/camps table is PERSON_DETAILS`
+    );
+  }
+  assert(
+    loreData.PERSON_DETAILS &&
+      typeof loreData.PERSON_DETAILS === 'object' &&
+      Array.isArray((loreData.PERSON_DETAILS.anshi || {}).stops),
+    'PERSON_DETAILS must be the lore_detail.js table holding each story line\'s camps/stops'
+  );
+
   // CUJ 9p: Territorial Ghost Diff (#grp-ghost-diff) Across Main, Protectorate, Rival & Cross-Dynasty Transitions
   const ghostNodes = [];
   ctrl.grpGhostDiff = {
@@ -1031,10 +1057,9 @@ async function runApiSearchSuite(ctx) {
       cssSrc.includes('.prefecture-shape.is-traced') &&
       cssSrc.includes('#scrubber-dock.is-challenge-locked') &&
       cssSrc.includes('#journey-card.is-custom-route') &&
-      cssSrc.includes('#act-github-star .star-mark') &&
-      cssSrc.includes('#lbl-github-star') &&
-      !cssSrc.includes('#lbl-music,\n  #act-github-star {'),
-    'app.js & style.css must implement persistent trace onboarding (#2), traced prefecture highlight (#5), custom route control card (#3), challenge scrubber lock (#6), and icon-only mobile GitHub link'
+      cssSrc.includes('.more-pop-link.more-mobile-only') &&
+      indexHtml.includes('id="lnk-more-github"'),
+    'app.js, index.html & style.css must implement persistent trace onboarding (#2), traced prefecture highlight (#5), custom route control card (#3), challenge scrubber lock (#6), and mobile-merged GitHub link inside #more-popover'
   );
   const mockPrefNodes = [
     { dataset: { prefTitle: '黄州' }, classList: { _s: new Set(), add(c) { this._s.add(c); }, remove(c) { this._s.delete(c); }, contains(c) { return this._s.has(c); } } },
@@ -1816,9 +1841,9 @@ async function runApiSearchSuite(ctx) {
     }
   }
   assert.strictEqual(
-    bootSnaps.s_qin_a.prefectures.length,
-    snapshots.s_qin_a.prefectures.length,
-    `atlas_boot.js s_qin_a prefecture count (${bootSnaps.s_qin_a.prefectures.length}) must match atlas_snapshots.js (${snapshots.s_qin_a.prefectures.length})`
+    bootSnaps.s_zhanguo_a.prefectures.length,
+    snapshots.s_zhanguo_a.prefectures.length,
+    `atlas_boot.js s_zhanguo_a prefecture count (${bootSnaps.s_zhanguo_a.prefectures.length}) must match atlas_snapshots.js (${snapshots.s_zhanguo_a.prefectures.length})`
   );
 
 
