@@ -53,12 +53,13 @@ done
 然后**按顺序**重跑定制脚本（都是幂等的）：
 
 ```bash
-node scripts/customize.js         # 域名替换、字体自托管、去上游统计
-node scripts/attribution.js       # 署名与星标文案
-node scripts/inject-stats.js      # 注入 xhja.cn 访客统计（site=map）
-node scripts/seo-patch.js         # 首页 title/keywords + 隐藏目录总览区块
-node scripts/build-landing-pages.js  # 重建两个 SEO 落地页
-node scripts/sync_version.js      # 重算缓存串（不能省，见第三节）
+node scripts/customize.js              # 域名替换、字体自托管、去上游统计
+node scripts/attribution.js            # 署名与星标文案
+node scripts/inject-stats.js           # 注入 xhja.cn 访客统计（load 后异步）
+node scripts/seo-patch.js              # 首页 title/keywords + 隐藏目录总览区块
+node scripts/build-landing-pages.js    # 重建两个 SEO 落地页
+node scripts/patch-test-assertions.js  # 重打测试里认可本站定制的断言
+node scripts/sync_version.js           # 重算缓存串（不能省，见第三节）
 ```
 
 验证（两个都必须过）：
@@ -86,10 +87,11 @@ python -c "exec(open(r'D:\DSH\xhja\_esa\aliyun.py').read().split('if __name__')[
 
 | 脚本 | 为什么必须有 |
 | --- | --- |
-| `customize.js` | 域名替换 8600+ 处、字体自托管、去 Google Fonts/vercount/beacon/atlas_track |
+| `customize.js` | 域名替换、字体自托管、去 Google Fonts/vercount/beacon/atlas_track。**2026-11-21 起用逐行删除字体 link**，不再依赖注释块结构（上游改过两次写法） |
 | `attribution.js` | 星标按钮指向本仓库、「更多」菜单标注原作者 |
-| `inject-stats.js` | 访客统计是上游没有的，取上游版 index.html 后必丢 |
+| `inject-stats.js` | 访客统计是上游没有的，取上游版 index.html 后必丢。用 load 后异步注入，避开上游「不得有外部 defer script」的断言 |
 | `seo-patch.js` | 首页 title/keywords 与隐藏目录总览区块，同上 |
+| `patch-test-assertions.js` | 上游把字体/beacon/atlas_track 写死成「必须存在」的断言，取上游版测试文件后必被覆盖 |
 | `build-landing-pages.js` | 王朝地图 / 历史人物足迹两个落地页，上游没有 |
 
 ⚠ **新增任何「上游没有的改动」时，必须同时写成幂等脚本放进这个清单**，
